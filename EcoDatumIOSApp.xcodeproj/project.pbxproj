@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */; };
-		BE2D2FD82236F8C800CBE228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FD72236F8C800CBE228 /* ViewController.swift */; };
 		BE2D2FDB2236F8C800CBE228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FD92236F8C800CBE228 /* Main.storyboard */; };
 		BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */; };
 		BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDE2236F8C900CBE228 /* LaunchScreen.storyboard */; };
@@ -148,7 +147,6 @@
 /* Begin PBXFileReference section */
 		BE2D2FD22236F8C800CBE228 /* EcoDatumIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoDatumIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE2D2FD72236F8C800CBE228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE2D2FDA2236F8C800CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE2D2FDF2236F8C900CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			children = (
 				BE2D3045223703CB00CBE228 /* Controllers */,
 				BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */,
-				BE2D2FD72236F8C800CBE228 /* ViewController.swift */,
 				BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */,
 				BE2D2FE12236F8C900CBE228 /* Info.plist */,
 			);
@@ -586,7 +583,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE2D30532237093500CBE228 /* MainController.swift in Sources */,
-				BE2D2FD82236F8C800CBE228 /* ViewController.swift in Sources */,
 				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
 				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,
 			);

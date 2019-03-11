@@ -1,0 +1,944 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */; };
+		BE2D2FD82236F8C800CBE228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FD72236F8C800CBE228 /* ViewController.swift */; };
+		BE2D2FDB2236F8C800CBE228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FD92236F8C800CBE228 /* Main.storyboard */; };
+		BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */; };
+		BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDE2236F8C900CBE228 /* LaunchScreen.storyboard */; };
+		BE2D2FEB2236F8C900CBE228 /* EcoDatumIOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FEA2236F8C900CBE228 /* EcoDatumIOSAppTests.swift */; };
+		BE2D2FF62236F8C900CBE228 /* EcoDatumIOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FF52236F8C900CBE228 /* EcoDatumIOSAppUITests.swift */; };
+		BE2D30352236FFF500CBE228 /* EcoDatumPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30322236FFC700CBE228 /* EcoDatumPersistence.framework */; };
+		BE2D30362236FFF500CBE228 /* EcoDatumPersistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30322236FFC700CBE228 /* EcoDatumPersistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE2D30392236FFF500CBE228 /* EcoDatumModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30292236FFC000CBE228 /* EcoDatumModel.framework */; };
+		BE2D303A2236FFF500CBE228 /* EcoDatumModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30292236FFC000CBE228 /* EcoDatumModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE2D303D2236FFF500CBE228 /* EcoDatumCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30202236FFBB00CBE228 /* EcoDatumCoreData.framework */; };
+		BE2D303E2236FFF500CBE228 /* EcoDatumCoreData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30202236FFBB00CBE228 /* EcoDatumCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE2D30412236FFF500CBE228 /* EcoDatumCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30172236FFB100CBE228 /* EcoDatumCommon.framework */; };
+		BE2D30422236FFF500CBE228 /* EcoDatumCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30172236FFB100CBE228 /* EcoDatumCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE2D304E2237064400CBE228 /* TestLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D304D2237064400CBE228 /* TestLocation.storyboard */; };
+		BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D30502237087A00CBE228 /* TestLocationController.swift */; };
+		BE2D30532237093500CBE228 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D30522237093500CBE228 /* MainController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE2D2FE72236F8C900CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D2FCA2236F8C800CBE228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE2D2FD12236F8C800CBE228;
+			remoteInfo = EcoDatumIOSApp;
+		};
+		BE2D2FF22236F8C900CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D2FCA2236F8C800CBE228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE2D2FD12236F8C800CBE228;
+			remoteInfo = EcoDatumIOSApp;
+		};
+		BE2D30162236FFB100CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D30112236FFB100CBE228 /* EcoDatumCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF255D6222105B9007134AA;
+			remoteInfo = EcoDatumCommon;
+		};
+		BE2D30182236FFB100CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D30112236FFB100CBE228 /* EcoDatumCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF255DF222105B9007134AA;
+			remoteInfo = EcoDatumCommonTests;
+		};
+		BE2D301F2236FFBB00CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D301A2236FFBB00CBE228 /* EcoDatumCoreData.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEC8633F2224DD7800AC120A;
+			remoteInfo = EcoDatumCoreData;
+		};
+		BE2D30212236FFBB00CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D301A2236FFBB00CBE228 /* EcoDatumCoreData.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEC863482224DD7800AC120A;
+			remoteInfo = EcoDatumCoreDataTests;
+		};
+		BE2D30282236FFC000CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF255AE2220F4A0007134AA;
+			remoteInfo = EcoDatumModel;
+		};
+		BE2D302A2236FFC000CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF255B72220F4A1007134AA;
+			remoteInfo = EcoDatumModelTests;
+		};
+		BE2D30312236FFC700CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEE91FCA222B31ED0072FF2B;
+			remoteInfo = EcoDatumPersistence;
+		};
+		BE2D30332236FFC700CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEE91FD3222B31ED0072FF2B;
+			remoteInfo = EcoDatumPersistenceTests;
+		};
+		BE2D30372236FFF500CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEE91FC9222B31ED0072FF2B;
+			remoteInfo = EcoDatumPersistence;
+		};
+		BE2D303B2236FFF500CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF255AD2220F4A0007134AA;
+			remoteInfo = EcoDatumModel;
+		};
+		BE2D303F2236FFF500CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D301A2236FFBB00CBE228 /* EcoDatumCoreData.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEC8633E2224DD7800AC120A;
+			remoteInfo = EcoDatumCoreData;
+		};
+		BE2D30432236FFF500CBE228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE2D30112236FFB100CBE228 /* EcoDatumCommon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF255D5222105B9007134AA;
+			remoteInfo = EcoDatumCommon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BE2D300F2236FEF100CBE228 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE2D303A2236FFF500CBE228 /* EcoDatumModel.framework in Embed Frameworks */,
+				BE2D303E2236FFF500CBE228 /* EcoDatumCoreData.framework in Embed Frameworks */,
+				BE2D30362236FFF500CBE228 /* EcoDatumPersistence.framework in Embed Frameworks */,
+				BE2D30422236FFF500CBE228 /* EcoDatumCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BE2D2FD22236F8C800CBE228 /* EcoDatumIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoDatumIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE2D2FD72236F8C800CBE228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE2D2FDA2236F8C800CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE2D2FDF2236F8C900CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE2D2FE12236F8C900CBE228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2D2FE62236F8C900CBE228 /* EcoDatumIOSAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoDatumIOSAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2D2FEA2236F8C900CBE228 /* EcoDatumIOSAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoDatumIOSAppTests.swift; sourceTree = "<group>"; };
+		BE2D2FEC2236F8C900CBE228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2D2FF12236F8C900CBE228 /* EcoDatumIOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoDatumIOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2D2FF52236F8C900CBE228 /* EcoDatumIOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoDatumIOSAppUITests.swift; sourceTree = "<group>"; };
+		BE2D2FF72236F8C900CBE228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2D30112236FFB100CBE228 /* EcoDatumCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumCommon.xcodeproj; path = ../EcoDatumCommon/EcoDatumCommon.xcodeproj; sourceTree = "<group>"; };
+		BE2D301A2236FFBB00CBE228 /* EcoDatumCoreData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumCoreData.xcodeproj; path = ../EcoDatumCoreData/EcoDatumCoreData.xcodeproj; sourceTree = "<group>"; };
+		BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumModel.xcodeproj; path = ../EcoDatumModel/EcoDatumModel.xcodeproj; sourceTree = "<group>"; };
+		BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumPersistence.xcodeproj; path = ../EcoDatumPersistence/EcoDatumPersistence.xcodeproj; sourceTree = "<group>"; };
+		BE2D304D2237064400CBE228 /* TestLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestLocation.storyboard; sourceTree = "<group>"; };
+		BE2D30502237087A00CBE228 /* TestLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocationController.swift; sourceTree = "<group>"; };
+		BE2D30522237093500CBE228 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE2D2FCF2236F8C800CBE228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2D30392236FFF500CBE228 /* EcoDatumModel.framework in Frameworks */,
+				BE2D303D2236FFF500CBE228 /* EcoDatumCoreData.framework in Frameworks */,
+				BE2D30352236FFF500CBE228 /* EcoDatumPersistence.framework in Frameworks */,
+				BE2D30412236FFF500CBE228 /* EcoDatumCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2D2FE32236F8C900CBE228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2D2FEE2236F8C900CBE228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE2D2FC92236F8C800CBE228 = {
+			isa = PBXGroup;
+			children = (
+				BE2D30102236FF6500CBE228 /* Dependencies */,
+				BE2D2FD42236F8C800CBE228 /* EcoDatumIOSApp */,
+				BE2D2FE92236F8C900CBE228 /* EcoDatumIOSAppTests */,
+				BE2D2FF42236F8C900CBE228 /* EcoDatumIOSAppUITests */,
+				BE2D2FD32236F8C800CBE228 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE2D2FD32236F8C800CBE228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D2FD22236F8C800CBE228 /* EcoDatumIOSApp.app */,
+				BE2D2FE62236F8C900CBE228 /* EcoDatumIOSAppTests.xctest */,
+				BE2D2FF12236F8C900CBE228 /* EcoDatumIOSAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE2D2FD42236F8C800CBE228 /* EcoDatumIOSApp */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D3045223703CB00CBE228 /* Controllers */,
+				BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */,
+				BE2D2FD72236F8C800CBE228 /* ViewController.swift */,
+				BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */,
+				BE2D2FE12236F8C900CBE228 /* Info.plist */,
+			);
+			path = EcoDatumIOSApp;
+			sourceTree = "<group>";
+		};
+		BE2D2FE92236F8C900CBE228 /* EcoDatumIOSAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D2FEA2236F8C900CBE228 /* EcoDatumIOSAppTests.swift */,
+				BE2D2FEC2236F8C900CBE228 /* Info.plist */,
+			);
+			path = EcoDatumIOSAppTests;
+			sourceTree = "<group>";
+		};
+		BE2D2FF42236F8C900CBE228 /* EcoDatumIOSAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D2FF52236F8C900CBE228 /* EcoDatumIOSAppUITests.swift */,
+				BE2D2FF72236F8C900CBE228 /* Info.plist */,
+			);
+			path = EcoDatumIOSAppUITests;
+			sourceTree = "<group>";
+		};
+		BE2D30102236FF6500CBE228 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */,
+				BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */,
+				BE2D301A2236FFBB00CBE228 /* EcoDatumCoreData.xcodeproj */,
+				BE2D30112236FFB100CBE228 /* EcoDatumCommon.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		BE2D30122236FFB100CBE228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D30172236FFB100CBE228 /* EcoDatumCommon.framework */,
+				BE2D30192236FFB100CBE228 /* EcoDatumCommonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE2D301B2236FFBB00CBE228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D30202236FFBB00CBE228 /* EcoDatumCoreData.framework */,
+				BE2D30222236FFBB00CBE228 /* EcoDatumCoreDataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE2D30242236FFC000CBE228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D30292236FFC000CBE228 /* EcoDatumModel.framework */,
+				BE2D302B2236FFC000CBE228 /* EcoDatumModelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE2D302D2236FFC700CBE228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D30322236FFC700CBE228 /* EcoDatumPersistence.framework */,
+				BE2D30342236FFC700CBE228 /* EcoDatumPersistenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE2D3045223703CB00CBE228 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D304F2237073700CBE228 /* Launch */,
+				BE2D3049223705F600CBE228 /* Test */,
+				BE2D30462237057800CBE228 /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE2D30462237057800CBE228 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D2FD92236F8C800CBE228 /* Main.storyboard */,
+				BE2D3048223705A100CBE228 /* Models */,
+				BE2D30472237058600CBE228 /* Views */,
+				BE2D30522237093500CBE228 /* MainController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BE2D30472237058600CBE228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE2D3048223705A100CBE228 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE2D3049223705F600CBE228 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D304A2237060C00CBE228 /* Location */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		BE2D304A2237060C00CBE228 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D304C2237062000CBE228 /* Views */,
+				BE2D304B2237061800CBE228 /* Models */,
+				BE2D304D2237064400CBE228 /* TestLocation.storyboard */,
+				BE2D30502237087A00CBE228 /* TestLocationController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		BE2D304B2237061800CBE228 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE2D304C2237062000CBE228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE2D304F2237073700CBE228 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D2FDE2236F8C900CBE228 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE2D2FD12236F8C800CBE228 /* EcoDatumIOSApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE2D2FFA2236F8C900CBE228 /* Build configuration list for PBXNativeTarget "EcoDatumIOSApp" */;
+			buildPhases = (
+				BE2D2FCE2236F8C800CBE228 /* Sources */,
+				BE2D2FCF2236F8C800CBE228 /* Frameworks */,
+				BE2D2FD02236F8C800CBE228 /* Resources */,
+				BE2D300F2236FEF100CBE228 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE2D30382236FFF500CBE228 /* PBXTargetDependency */,
+				BE2D303C2236FFF500CBE228 /* PBXTargetDependency */,
+				BE2D30402236FFF500CBE228 /* PBXTargetDependency */,
+				BE2D30442236FFF500CBE228 /* PBXTargetDependency */,
+			);
+			name = EcoDatumIOSApp;
+			productName = EcoDatumIOSApp;
+			productReference = BE2D2FD22236F8C800CBE228 /* EcoDatumIOSApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE2D2FE52236F8C900CBE228 /* EcoDatumIOSAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE2D2FFD2236F8C900CBE228 /* Build configuration list for PBXNativeTarget "EcoDatumIOSAppTests" */;
+			buildPhases = (
+				BE2D2FE22236F8C900CBE228 /* Sources */,
+				BE2D2FE32236F8C900CBE228 /* Frameworks */,
+				BE2D2FE42236F8C900CBE228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE2D2FE82236F8C900CBE228 /* PBXTargetDependency */,
+			);
+			name = EcoDatumIOSAppTests;
+			productName = EcoDatumIOSAppTests;
+			productReference = BE2D2FE62236F8C900CBE228 /* EcoDatumIOSAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE2D2FF02236F8C900CBE228 /* EcoDatumIOSAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE2D30002236F8C900CBE228 /* Build configuration list for PBXNativeTarget "EcoDatumIOSAppUITests" */;
+			buildPhases = (
+				BE2D2FED2236F8C900CBE228 /* Sources */,
+				BE2D2FEE2236F8C900CBE228 /* Frameworks */,
+				BE2D2FEF2236F8C900CBE228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE2D2FF32236F8C900CBE228 /* PBXTargetDependency */,
+			);
+			name = EcoDatumIOSAppUITests;
+			productName = EcoDatumIOSAppUITests;
+			productReference = BE2D2FF12236F8C900CBE228 /* EcoDatumIOSAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE2D2FCA2236F8C800CBE228 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Kenneth Wingerden";
+				TargetAttributes = {
+					BE2D2FD12236F8C800CBE228 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BE2D2FE52236F8C900CBE228 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BE2D2FD12236F8C800CBE228;
+					};
+					BE2D2FF02236F8C900CBE228 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BE2D2FD12236F8C800CBE228;
+					};
+				};
+			};
+			buildConfigurationList = BE2D2FCD2236F8C800CBE228 /* Build configuration list for PBXProject "EcoDatumIOSApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE2D2FC92236F8C800CBE228;
+			productRefGroup = BE2D2FD32236F8C800CBE228 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BE2D30122236FFB100CBE228 /* Products */;
+					ProjectRef = BE2D30112236FFB100CBE228 /* EcoDatumCommon.xcodeproj */;
+				},
+				{
+					ProductGroup = BE2D301B2236FFBB00CBE228 /* Products */;
+					ProjectRef = BE2D301A2236FFBB00CBE228 /* EcoDatumCoreData.xcodeproj */;
+				},
+				{
+					ProductGroup = BE2D30242236FFC000CBE228 /* Products */;
+					ProjectRef = BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */;
+				},
+				{
+					ProductGroup = BE2D302D2236FFC700CBE228 /* Products */;
+					ProjectRef = BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BE2D2FD12236F8C800CBE228 /* EcoDatumIOSApp */,
+				BE2D2FE52236F8C900CBE228 /* EcoDatumIOSAppTests */,
+				BE2D2FF02236F8C900CBE228 /* EcoDatumIOSAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BE2D30172236FFB100CBE228 /* EcoDatumCommon.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EcoDatumCommon.framework;
+			remoteRef = BE2D30162236FFB100CBE228 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE2D30192236FFB100CBE228 /* EcoDatumCommonTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EcoDatumCommonTests.xctest;
+			remoteRef = BE2D30182236FFB100CBE228 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE2D30202236FFBB00CBE228 /* EcoDatumCoreData.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EcoDatumCoreData.framework;
+			remoteRef = BE2D301F2236FFBB00CBE228 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE2D30222236FFBB00CBE228 /* EcoDatumCoreDataTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EcoDatumCoreDataTests.xctest;
+			remoteRef = BE2D30212236FFBB00CBE228 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE2D30292236FFC000CBE228 /* EcoDatumModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EcoDatumModel.framework;
+			remoteRef = BE2D30282236FFC000CBE228 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE2D302B2236FFC000CBE228 /* EcoDatumModelTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EcoDatumModelTests.xctest;
+			remoteRef = BE2D302A2236FFC000CBE228 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE2D30322236FFC700CBE228 /* EcoDatumPersistence.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EcoDatumPersistence.framework;
+			remoteRef = BE2D30312236FFC700CBE228 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE2D30342236FFC700CBE228 /* EcoDatumPersistenceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EcoDatumPersistenceTests.xctest;
+			remoteRef = BE2D30332236FFC700CBE228 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE2D2FD02236F8C800CBE228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */,
+				BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */,
+				BE2D2FDB2236F8C800CBE228 /* Main.storyboard in Resources */,
+				BE2D304E2237064400CBE228 /* TestLocation.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2D2FE42236F8C900CBE228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2D2FEF2236F8C900CBE228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE2D2FCE2236F8C800CBE228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2D30532237093500CBE228 /* MainController.swift in Sources */,
+				BE2D2FD82236F8C800CBE228 /* ViewController.swift in Sources */,
+				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
+				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2D2FE22236F8C900CBE228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2D2FEB2236F8C900CBE228 /* EcoDatumIOSAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2D2FED2236F8C900CBE228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2D2FF62236F8C900CBE228 /* EcoDatumIOSAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE2D2FE82236F8C900CBE228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE2D2FD12236F8C800CBE228 /* EcoDatumIOSApp */;
+			targetProxy = BE2D2FE72236F8C900CBE228 /* PBXContainerItemProxy */;
+		};
+		BE2D2FF32236F8C900CBE228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE2D2FD12236F8C800CBE228 /* EcoDatumIOSApp */;
+			targetProxy = BE2D2FF22236F8C900CBE228 /* PBXContainerItemProxy */;
+		};
+		BE2D30382236FFF500CBE228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EcoDatumPersistence;
+			targetProxy = BE2D30372236FFF500CBE228 /* PBXContainerItemProxy */;
+		};
+		BE2D303C2236FFF500CBE228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EcoDatumModel;
+			targetProxy = BE2D303B2236FFF500CBE228 /* PBXContainerItemProxy */;
+		};
+		BE2D30402236FFF500CBE228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EcoDatumCoreData;
+			targetProxy = BE2D303F2236FFF500CBE228 /* PBXContainerItemProxy */;
+		};
+		BE2D30442236FFF500CBE228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EcoDatumCommon;
+			targetProxy = BE2D30432236FFF500CBE228 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE2D2FD92236F8C800CBE228 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE2D2FDA2236F8C800CBE228 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE2D2FDE2236F8C900CBE228 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE2D2FDF2236F8C900CBE228 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE2D2FF82236F8C900CBE228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE2D2FF92236F8C900CBE228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE2D2FFB2236F8C900CBE228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9424XMB56D;
+				INFOPLIST_FILE = EcoDatumIOSApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ecodatum.EcoDatumIOSApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE2D2FFC2236F8C900CBE228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9424XMB56D;
+				INFOPLIST_FILE = EcoDatumIOSApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ecodatum.EcoDatumIOSApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE2D2FFE2236F8C900CBE228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9424XMB56D;
+				INFOPLIST_FILE = EcoDatumIOSAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ecodatum.EcoDatumIOSAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcoDatumIOSApp.app/EcoDatumIOSApp";
+			};
+			name = Debug;
+		};
+		BE2D2FFF2236F8C900CBE228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9424XMB56D;
+				INFOPLIST_FILE = EcoDatumIOSAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ecodatum.EcoDatumIOSAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcoDatumIOSApp.app/EcoDatumIOSApp";
+			};
+			name = Release;
+		};
+		BE2D30012236F8C900CBE228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9424XMB56D;
+				INFOPLIST_FILE = EcoDatumIOSAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ecodatum.EcoDatumIOSAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcoDatumIOSApp;
+			};
+			name = Debug;
+		};
+		BE2D30022236F8C900CBE228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9424XMB56D;
+				INFOPLIST_FILE = EcoDatumIOSAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ecodatum.EcoDatumIOSAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcoDatumIOSApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE2D2FCD2236F8C800CBE228 /* Build configuration list for PBXProject "EcoDatumIOSApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE2D2FF82236F8C900CBE228 /* Debug */,
+				BE2D2FF92236F8C900CBE228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE2D2FFA2236F8C900CBE228 /* Build configuration list for PBXNativeTarget "EcoDatumIOSApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE2D2FFB2236F8C900CBE228 /* Debug */,
+				BE2D2FFC2236F8C900CBE228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE2D2FFD2236F8C900CBE228 /* Build configuration list for PBXNativeTarget "EcoDatumIOSAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE2D2FFE2236F8C900CBE228 /* Debug */,
+				BE2D2FFF2236F8C900CBE228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE2D30002236F8C900CBE228 /* Build configuration list for PBXNativeTarget "EcoDatumIOSAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE2D30012236F8C900CBE228 /* Debug */,
+				BE2D30022236F8C900CBE228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE2D2FCA2236F8C800CBE228 /* Project object */;
+}

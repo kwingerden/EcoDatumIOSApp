@@ -24,6 +24,10 @@
 		BE2D304E2237064400CBE228 /* TestLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D304D2237064400CBE228 /* TestLocation.storyboard */; };
 		BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D30502237087A00CBE228 /* TestLocationController.swift */; };
 		BE2D30532237093500CBE228 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D30522237093500CBE228 /* MainController.swift */; };
+		BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D305722385A5700CBE228 /* ColorPalette.swift */; };
+		BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305A22385CC000CBE228 /* ColorPalette.pdf */; };
+		BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */; };
+		BE2D30622238B85400CBE228 /* GreenRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D30612238B85400CBE228 /* GreenRoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +168,10 @@
 		BE2D304D2237064400CBE228 /* TestLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestLocation.storyboard; sourceTree = "<group>"; };
 		BE2D30502237087A00CBE228 /* TestLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocationController.swift; sourceTree = "<group>"; };
 		BE2D30522237093500CBE228 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		BE2D305722385A5700CBE228 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		BE2D305A22385CC000CBE228 /* ColorPalette.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ColorPalette.pdf; sourceTree = "<group>"; };
+		BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSplitView.storyboard; sourceTree = "<group>"; };
+		BE2D30612238B85400CBE228 /* GreenRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenRoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +227,8 @@
 		BE2D2FD42236F8C800CBE228 /* EcoDatumIOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE2D305922385CA200CBE228 /* Resources */,
+				BE2D305622385A2900CBE228 /* Views */,
 				BE2D3045223703CB00CBE228 /* Controllers */,
 				BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */,
 				BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */,
@@ -330,6 +340,7 @@
 		BE2D3049223705F600CBE228 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				BE2D305C22386EB600CBE228 /* SplitView */,
 				BE2D304A2237060C00CBE228 /* Location */,
 			);
 			path = Test;
@@ -366,6 +377,31 @@
 				BE2D2FDE2236F8C900CBE228 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		BE2D305622385A2900CBE228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D30612238B85400CBE228 /* GreenRoundedButton.swift */,
+				BE2D305722385A5700CBE228 /* ColorPalette.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE2D305922385CA200CBE228 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D305A22385CC000CBE228 /* ColorPalette.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE2D305C22386EB600CBE228 /* SplitView */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */,
+			);
+			path = SplitView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,7 +590,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */,
 				BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */,
+				BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */,
 				BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */,
 				BE2D2FDB2236F8C800CBE228 /* Main.storyboard in Resources */,
 				BE2D304E2237064400CBE228 /* TestLocation.storyboard in Resources */,
@@ -583,8 +621,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE2D30532237093500CBE228 /* MainController.swift in Sources */,
+				BE2D30622238B85400CBE228 /* GreenRoundedButton.swift in Sources */,
 				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
 				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,
+				BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,8 @@
 		BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D305722385A5700CBE228 /* ColorPalette.swift */; };
 		BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305A22385CC000CBE228 /* ColorPalette.pdf */; };
 		BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */; };
-		BE2D30622238B85400CBE228 /* GreenRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D30612238B85400CBE228 /* GreenRoundedButton.swift */; };
+		BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */; };
+		BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,7 +172,8 @@
 		BE2D305722385A5700CBE228 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		BE2D305A22385CC000CBE228 /* ColorPalette.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ColorPalette.pdf; sourceTree = "<group>"; };
 		BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSplitView.storyboard; sourceTree = "<group>"; };
-		BE2D30612238B85400CBE228 /* GreenRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenRoundedButton.swift; sourceTree = "<group>"; };
+		BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderedRoundedButton.xib; sourceTree = "<group>"; };
+		BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedRoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,8 +384,8 @@
 		BE2D305622385A2900CBE228 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BE2D30612238B85400CBE228 /* GreenRoundedButton.swift */,
-				BE2D305722385A5700CBE228 /* ColorPalette.swift */,
+				BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */,
+				BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,6 +393,7 @@
 		BE2D305922385CA200CBE228 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BE2D305722385A5700CBE228 /* ColorPalette.swift */,
 				BE2D305A22385CC000CBE228 /* ColorPalette.pdf */,
 			);
 			path = Resources;
@@ -590,6 +593,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */,
 				BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */,
 				BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */,
 				BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */,
@@ -621,10 +625,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE2D30532237093500CBE228 /* MainController.swift in Sources */,
-				BE2D30622238B85400CBE228 /* GreenRoundedButton.swift in Sources */,
 				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
 				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,
 				BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */,
+				BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

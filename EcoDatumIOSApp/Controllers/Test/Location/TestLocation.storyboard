@@ -19,11 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSO-Ii-adE" customClass="GreenRoundedButton" customModule="EcoDatumIOSApp" customModuleProvider="target">
-                                <rect key="frame" x="82" y="277" width="118" height="52"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5S-SV-qtU" customClass="BorderedRoundedButton" customModule="EcoDatumIOSApp" customModuleProvider="target">
+                                <rect key="frame" x="93" y="215" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="EDPlatinum"/>
                         <viewLayoutGuide key="safeArea" id="F4k-pA-ulZ"/>

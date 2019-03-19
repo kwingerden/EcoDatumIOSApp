@@ -1,0 +1,4 @@
+github "kwingerden/EcoDatumCommon"
+github "kwingerden/EcoDatumCoreData"
+github "kwingerden/EcoDatumModel"
+github "kwingerden/EcoDatumPersistence"

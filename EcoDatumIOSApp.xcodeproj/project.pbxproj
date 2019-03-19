@@ -13,8 +13,6 @@
 		BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDE2236F8C900CBE228 /* LaunchScreen.storyboard */; };
 		BE2D2FEB2236F8C900CBE228 /* EcoDatumIOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FEA2236F8C900CBE228 /* EcoDatumIOSAppTests.swift */; };
 		BE2D2FF62236F8C900CBE228 /* EcoDatumIOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FF52236F8C900CBE228 /* EcoDatumIOSAppUITests.swift */; };
-		BE2D30352236FFF500CBE228 /* EcoDatumPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30322236FFC700CBE228 /* EcoDatumPersistence.framework */; };
-		BE2D30362236FFF500CBE228 /* EcoDatumPersistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30322236FFC700CBE228 /* EcoDatumPersistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE2D30392236FFF500CBE228 /* EcoDatumModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30292236FFC000CBE228 /* EcoDatumModel.framework */; };
 		BE2D303A2236FFF500CBE228 /* EcoDatumModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30292236FFC000CBE228 /* EcoDatumModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE2D303D2236FFF500CBE228 /* EcoDatumCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30202236FFBB00CBE228 /* EcoDatumCoreData.framework */; };
@@ -27,6 +25,8 @@
 		BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D305722385A5700CBE228 /* ColorPalette.swift */; };
 		BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305A22385CC000CBE228 /* ColorPalette.pdf */; };
 		BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */; };
+		BE4BF704224098EE00AAE0DA /* EcoDatumService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */; };
+		BE4BF705224098EE00AAE0DA /* EcoDatumService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */; };
 		BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */; };
 /* End PBXBuildFile section */
@@ -88,27 +88,6 @@
 			remoteGlobalIDString = BEF255B72220F4A1007134AA;
 			remoteInfo = EcoDatumModelTests;
 		};
-		BE2D30312236FFC700CBE228 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BEE91FCA222B31ED0072FF2B;
-			remoteInfo = EcoDatumPersistence;
-		};
-		BE2D30332236FFC700CBE228 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BEE91FD3222B31ED0072FF2B;
-			remoteInfo = EcoDatumPersistenceTests;
-		};
-		BE2D30372236FFF500CBE228 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BEE91FC9222B31ED0072FF2B;
-			remoteInfo = EcoDatumPersistence;
-		};
 		BE2D303B2236FFF500CBE228 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */;
@@ -130,6 +109,27 @@
 			remoteGlobalIDString = BEF255D5222105B9007134AA;
 			remoteInfo = EcoDatumCommon;
 		};
+		BE4BF700224098AE00AAE0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE4BF6C022400A6500AAE0DA;
+			remoteInfo = EcoDatumService;
+		};
+		BE4BF702224098AE00AAE0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE4BF6C922400A6600AAE0DA;
+			remoteInfo = EcoDatumServiceTests;
+		};
+		BE4BF706224098EE00AAE0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE4BF6BF22400A6500AAE0DA;
+			remoteInfo = EcoDatumService;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -139,9 +139,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BE4BF705224098EE00AAE0DA /* EcoDatumService.framework in Embed Frameworks */,
 				BE2D303A2236FFF500CBE228 /* EcoDatumModel.framework in Embed Frameworks */,
 				BE2D303E2236FFF500CBE228 /* EcoDatumCoreData.framework in Embed Frameworks */,
-				BE2D30362236FFF500CBE228 /* EcoDatumPersistence.framework in Embed Frameworks */,
 				BE2D30422236FFF500CBE228 /* EcoDatumCommon.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -165,13 +165,13 @@
 		BE2D30112236FFB100CBE228 /* EcoDatumCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumCommon.xcodeproj; path = ../EcoDatumCommon/EcoDatumCommon.xcodeproj; sourceTree = "<group>"; };
 		BE2D301A2236FFBB00CBE228 /* EcoDatumCoreData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumCoreData.xcodeproj; path = ../EcoDatumCoreData/EcoDatumCoreData.xcodeproj; sourceTree = "<group>"; };
 		BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumModel.xcodeproj; path = ../EcoDatumModel/EcoDatumModel.xcodeproj; sourceTree = "<group>"; };
-		BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumPersistence.xcodeproj; path = ../EcoDatumPersistence/EcoDatumPersistence.xcodeproj; sourceTree = "<group>"; };
 		BE2D304D2237064400CBE228 /* TestLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestLocation.storyboard; sourceTree = "<group>"; };
 		BE2D30502237087A00CBE228 /* TestLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocationController.swift; sourceTree = "<group>"; };
 		BE2D30522237093500CBE228 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		BE2D305722385A5700CBE228 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		BE2D305A22385CC000CBE228 /* ColorPalette.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ColorPalette.pdf; sourceTree = "<group>"; };
 		BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSplitView.storyboard; sourceTree = "<group>"; };
+		BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumService.xcodeproj; path = ../EcoDatumService/EcoDatumService.xcodeproj; sourceTree = "<group>"; };
 		BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderedRoundedButton.xib; sourceTree = "<group>"; };
 		BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedRoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,9 +181,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4BF704224098EE00AAE0DA /* EcoDatumService.framework in Frameworks */,
 				BE2D30392236FFF500CBE228 /* EcoDatumModel.framework in Frameworks */,
 				BE2D303D2236FFF500CBE228 /* EcoDatumCoreData.framework in Frameworks */,
-				BE2D30352236FFF500CBE228 /* EcoDatumPersistence.framework in Frameworks */,
 				BE2D30412236FFF500CBE228 /* EcoDatumCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +260,7 @@
 		BE2D30102236FF6500CBE228 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */,
+				BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */,
 				BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */,
 				BE2D301A2236FFBB00CBE228 /* EcoDatumCoreData.xcodeproj */,
 				BE2D30112236FFB100CBE228 /* EcoDatumCommon.xcodeproj */,
@@ -291,15 +291,6 @@
 			children = (
 				BE2D30292236FFC000CBE228 /* EcoDatumModel.framework */,
 				BE2D302B2236FFC000CBE228 /* EcoDatumModelTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BE2D302D2236FFC700CBE228 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE2D30322236FFC700CBE228 /* EcoDatumPersistence.framework */,
-				BE2D30342236FFC700CBE228 /* EcoDatumPersistenceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -407,6 +398,15 @@
 			path = SplitView;
 			sourceTree = "<group>";
 		};
+		BE4BF6F8224098AE00AAE0DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */,
+				BE4BF703224098AE00AAE0DA /* EcoDatumServiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,10 +422,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				BE2D30382236FFF500CBE228 /* PBXTargetDependency */,
 				BE2D303C2236FFF500CBE228 /* PBXTargetDependency */,
 				BE2D30402236FFF500CBE228 /* PBXTargetDependency */,
 				BE2D30442236FFF500CBE228 /* PBXTargetDependency */,
+				BE4BF707224098EE00AAE0DA /* PBXTargetDependency */,
 			);
 			name = EcoDatumIOSApp;
 			productName = EcoDatumIOSApp;
@@ -516,8 +516,8 @@
 					ProjectRef = BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */;
 				},
 				{
-					ProductGroup = BE2D302D2236FFC700CBE228 /* Products */;
-					ProjectRef = BE2D302C2236FFC700CBE228 /* EcoDatumPersistence.xcodeproj */;
+					ProductGroup = BE4BF6F8224098AE00AAE0DA /* Products */;
+					ProjectRef = BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -572,18 +572,18 @@
 			remoteRef = BE2D302A2236FFC000CBE228 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BE2D30322236FFC700CBE228 /* EcoDatumPersistence.framework */ = {
+		BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = EcoDatumPersistence.framework;
-			remoteRef = BE2D30312236FFC700CBE228 /* PBXContainerItemProxy */;
+			path = EcoDatumService.framework;
+			remoteRef = BE4BF700224098AE00AAE0DA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BE2D30342236FFC700CBE228 /* EcoDatumPersistenceTests.xctest */ = {
+		BE4BF703224098AE00AAE0DA /* EcoDatumServiceTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = EcoDatumPersistenceTests.xctest;
-			remoteRef = BE2D30332236FFC700CBE228 /* PBXContainerItemProxy */;
+			path = EcoDatumServiceTests.xctest;
+			remoteRef = BE4BF702224098AE00AAE0DA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -661,11 +661,6 @@
 			target = BE2D2FD12236F8C800CBE228 /* EcoDatumIOSApp */;
 			targetProxy = BE2D2FF22236F8C900CBE228 /* PBXContainerItemProxy */;
 		};
-		BE2D30382236FFF500CBE228 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = EcoDatumPersistence;
-			targetProxy = BE2D30372236FFF500CBE228 /* PBXContainerItemProxy */;
-		};
 		BE2D303C2236FFF500CBE228 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EcoDatumModel;
@@ -680,6 +675,11 @@
 			isa = PBXTargetDependency;
 			name = EcoDatumCommon;
 			targetProxy = BE2D30432236FFF500CBE228 /* PBXContainerItemProxy */;
+		};
+		BE4BF707224098EE00AAE0DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EcoDatumService;
+			targetProxy = BE4BF706224098EE00AAE0DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

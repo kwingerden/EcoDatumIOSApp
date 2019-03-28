@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c2a-Uq-iUJ">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notebook Detail View Controller-->
+        <scene sceneID="fYA-1b-6KC">
+            <objects>
+                <viewController id="lTa-Fr-Yf0" customClass="NotebookDetailViewController" customModule="EcoDatumIOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7E8-Kw-042">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Notebook to Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qad-YF-el4">
+                                <rect key="frame" x="201.5" y="494" width="365" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qad-YF-el4" firstAttribute="centerX" secondItem="7E8-Kw-042" secondAttribute="centerX" id="2xc-2Y-hIJ"/>
+                            <constraint firstItem="qad-YF-el4" firstAttribute="centerY" secondItem="7E8-Kw-042" secondAttribute="centerY" id="MlV-Aw-SXJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pna-lm-1h0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mn2-CH-0mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145" y="-121"/>
+        </scene>
+        <!--Notebooks-->
+        <scene sceneID="hmK-m6-AZl">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="em6-EO-ZNM" customClass="NotebookRootViewController" customModule="EcoDatumIOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="URs-qn-04m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="vMG-gy-wxi">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vMG-gy-wxi" id="xlE-Pj-Rv8">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="em6-EO-ZNM" id="FJ1-ZQ-6NI"/>
+                            <outlet property="delegate" destination="em6-EO-ZNM" id="gna-GR-e2l"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Notebooks" id="WOq-A0-6WP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xw-QC-lQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="-805"/>
+        </scene>
+        <!--Notebook Master Controller-->
+        <scene sceneID="dlP-GQ-moZ">
+            <objects>
+                <navigationController toolbarHidden="NO" hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" hidesBarsWhenKeyboardAppears="YES" hidesBarsWhenVerticallyCompact="YES" id="Xh8-ya-nMA" customClass="NotebookMasterController" customModule="EcoDatumIOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="MmS-ga-Aqb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q4J-Do-t4r">
+                        <rect key="frame" x="0.0" y="974" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="em6-EO-ZNM" kind="relationship" relationship="rootViewController" id="vra-ur-E0u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQl-ec-Qgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="-805"/>
+        </scene>
+        <!--Notebook Split View Controller-->
+        <scene sceneID="R3W-8H-YVQ">
+            <objects>
+                <splitViewController id="c2a-Uq-iUJ" customClass="NotebookSplitViewController" customModule="EcoDatumIOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Xh8-ya-nMA" kind="relationship" relationship="masterViewController" id="s9U-fG-avW"/>
+                        <segue destination="lTa-Fr-Yf0" kind="relationship" relationship="detailViewController" id="34C-09-fUy"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lEc-Zl-ANB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-696" y="-715"/>
+        </scene>
+    </scenes>
+</document>

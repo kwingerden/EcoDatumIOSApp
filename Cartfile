@@ -2,3 +2,5 @@ github "kwingerden/EcoDatumCommon"
 github "kwingerden/EcoDatumCoreData"
 github "kwingerden/EcoDatumModel"
 github "kwingerden/EcoDatumPersistence"
+
+github "SwiftyBeaver/SwiftyBeaver" == 1.6.2

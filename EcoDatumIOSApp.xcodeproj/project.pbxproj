@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */; };
-		BE2D2FDB2236F8C800CBE228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FD92236F8C800CBE228 /* Main.storyboard */; };
+		BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FD92236F8C800CBE228 /* Notebook.storyboard */; };
 		BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */; };
 		BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDE2236F8C900CBE228 /* LaunchScreen.storyboard */; };
 		BE2D2FEB2236F8C900CBE228 /* EcoDatumIOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FEA2236F8C900CBE228 /* EcoDatumIOSAppTests.swift */; };
@@ -21,14 +21,19 @@
 		BE2D30422236FFF500CBE228 /* EcoDatumCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE2D30172236FFB100CBE228 /* EcoDatumCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE2D304E2237064400CBE228 /* TestLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D304D2237064400CBE228 /* TestLocation.storyboard */; };
 		BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D30502237087A00CBE228 /* TestLocationController.swift */; };
-		BE2D30532237093500CBE228 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D30522237093500CBE228 /* MainController.swift */; };
 		BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D305722385A5700CBE228 /* ColorPalette.swift */; };
 		BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305A22385CC000CBE228 /* ColorPalette.pdf */; };
 		BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */; };
+		BE471A17224B1D6700E041B8 /* NotebookSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE471A16224B1D6700E041B8 /* NotebookSplitViewController.swift */; };
+		BE471A26224B25A400E041B8 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE471A25224B25A400E041B8 /* SwiftyBeaver.framework */; };
+		BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE471A28224B26E600E041B8 /* NotebookMasterController.swift */; };
+		BE471A2B224B277100E041B8 /* NotebookRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE471A2A224B277100E041B8 /* NotebookRootViewController.swift */; };
+		BE471A2D224B27D800E041B8 /* NotebookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE471A2C224B27D800E041B8 /* NotebookDetailViewController.swift */; };
 		BE4BF704224098EE00AAE0DA /* EcoDatumService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */; };
 		BE4BF705224098EE00AAE0DA /* EcoDatumService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */; };
 		BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */; };
+		BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,7 +157,7 @@
 /* Begin PBXFileReference section */
 		BE2D2FD22236F8C800CBE228 /* EcoDatumIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoDatumIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE2D2FDA2236F8C800CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE2D2FDA2236F8C800CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notebook.storyboard; sourceTree = "<group>"; };
 		BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE2D2FDF2236F8C900CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE2D2FE12236F8C900CBE228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,13 +172,18 @@
 		BE2D30232236FFC000CBE228 /* EcoDatumModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumModel.xcodeproj; path = ../EcoDatumModel/EcoDatumModel.xcodeproj; sourceTree = "<group>"; };
 		BE2D304D2237064400CBE228 /* TestLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestLocation.storyboard; sourceTree = "<group>"; };
 		BE2D30502237087A00CBE228 /* TestLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocationController.swift; sourceTree = "<group>"; };
-		BE2D30522237093500CBE228 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		BE2D305722385A5700CBE228 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		BE2D305A22385CC000CBE228 /* ColorPalette.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ColorPalette.pdf; sourceTree = "<group>"; };
 		BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSplitView.storyboard; sourceTree = "<group>"; };
+		BE471A16224B1D6700E041B8 /* NotebookSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookSplitViewController.swift; sourceTree = "<group>"; };
+		BE471A25224B25A400E041B8 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		BE471A28224B26E600E041B8 /* NotebookMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookMasterController.swift; sourceTree = "<group>"; };
+		BE471A2A224B277100E041B8 /* NotebookRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookRootViewController.swift; sourceTree = "<group>"; };
+		BE471A2C224B27D800E041B8 /* NotebookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookDetailViewController.swift; sourceTree = "<group>"; };
 		BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumService.xcodeproj; path = ../EcoDatumService/EcoDatumService.xcodeproj; sourceTree = "<group>"; };
 		BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderedRoundedButton.xib; sourceTree = "<group>"; };
 		BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedRoundedButton.swift; sourceTree = "<group>"; };
+		BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +195,7 @@
 				BE2D30392236FFF500CBE228 /* EcoDatumModel.framework in Frameworks */,
 				BE2D303D2236FFF500CBE228 /* EcoDatumCoreData.framework in Frameworks */,
 				BE2D30412236FFF500CBE228 /* EcoDatumCommon.framework in Frameworks */,
+				BE471A26224B25A400E041B8 /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +219,7 @@
 		BE2D2FC92236F8C800CBE228 = {
 			isa = PBXGroup;
 			children = (
+				BE471A23224B237000E041B8 /* Frameworks */,
 				BE2D30102236FF6500CBE228 /* Dependencies */,
 				BE2D2FD42236F8C800CBE228 /* EcoDatumIOSApp */,
 				BE2D2FE92236F8C900CBE228 /* EcoDatumIOSAppTests */,
@@ -235,6 +247,7 @@
 				BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */,
 				BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */,
 				BE2D2FE12236F8C900CBE228 /* Info.plist */,
+				BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */,
 			);
 			path = EcoDatumIOSApp;
 			sourceTree = "<group>";
@@ -300,20 +313,23 @@
 			children = (
 				BE2D304F2237073700CBE228 /* Launch */,
 				BE2D3049223705F600CBE228 /* Test */,
-				BE2D30462237057800CBE228 /* Main */,
+				BE2D30462237057800CBE228 /* Notebook */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		BE2D30462237057800CBE228 /* Main */ = {
+		BE2D30462237057800CBE228 /* Notebook */ = {
 			isa = PBXGroup;
 			children = (
-				BE2D2FD92236F8C800CBE228 /* Main.storyboard */,
+				BE2D2FD92236F8C800CBE228 /* Notebook.storyboard */,
 				BE2D3048223705A100CBE228 /* Models */,
 				BE2D30472237058600CBE228 /* Views */,
-				BE2D30522237093500CBE228 /* MainController.swift */,
+				BE471A16224B1D6700E041B8 /* NotebookSplitViewController.swift */,
+				BE471A28224B26E600E041B8 /* NotebookMasterController.swift */,
+				BE471A2A224B277100E041B8 /* NotebookRootViewController.swift */,
+				BE471A2C224B27D800E041B8 /* NotebookDetailViewController.swift */,
 			);
-			path = Main;
+			path = Notebook;
 			sourceTree = "<group>";
 		};
 		BE2D30472237058600CBE228 /* Views */ = {
@@ -398,6 +414,14 @@
 			path = SplitView;
 			sourceTree = "<group>";
 		};
+		BE471A23224B237000E041B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE471A25224B25A400E041B8 /* SwiftyBeaver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE4BF6F8224098AE00AAE0DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +442,7 @@
 				BE2D2FCF2236F8C800CBE228 /* Frameworks */,
 				BE2D2FD02236F8C800CBE228 /* Resources */,
 				BE2D300F2236FEF100CBE228 /* Embed Frameworks */,
+				BE471A27224B25BE00E041B8 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -598,7 +623,7 @@
 				BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */,
 				BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */,
 				BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */,
-				BE2D2FDB2236F8C800CBE228 /* Main.storyboard in Resources */,
+				BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */,
 				BE2D304E2237064400CBE228 /* TestLocation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,16 +644,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BE471A27224B25BE00E041B8 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyBeaver.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE2D2FCE2236F8C800CBE228 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE2D30532237093500CBE228 /* MainController.swift in Sources */,
+				BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */,
+				BE471A2B224B277100E041B8 /* NotebookRootViewController.swift in Sources */,
+				BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */,
 				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
+				BE471A17224B1D6700E041B8 /* NotebookSplitViewController.swift in Sources */,
 				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,
 				BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */,
 				BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */,
+				BE471A2D224B27D800E041B8 /* NotebookDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,12 +736,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE2D2FD92236F8C800CBE228 /* Main.storyboard */ = {
+		BE2D2FD92236F8C800CBE228 /* Notebook.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BE2D2FDA2236F8C800CBE228 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Notebook.storyboard;
 			sourceTree = "<group>";
 		};
 		BE2D2FDE2236F8C900CBE228 /* LaunchScreen.storyboard */ = {
@@ -826,6 +878,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9424XMB56D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EcoDatumIOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -845,6 +901,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9424XMB56D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EcoDatumIOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

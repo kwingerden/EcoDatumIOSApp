@@ -1,4 +1,5 @@
-github "kwingerden/EcoDatumCommon" "v0.0.8"
+github "SwiftyBeaver/SwiftyBeaver" "1.6.2"
+github "kwingerden/EcoDatumCommon" "v0.0.9"
 github "kwingerden/EcoDatumCoreData" "v0.0.5"
 github "kwingerden/EcoDatumModel" "v0.0.6"
 github "kwingerden/EcoDatumPersistence" "v0.0.2"

@@ -34,6 +34,8 @@
 		BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */; };
 		BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */; };
 		BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */; };
+		BEB89300224D4DF60094A21E /* NotebookDetailNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB892FF224D4DF60094A21E /* NotebookDetailNavigationController.swift */; };
+		BEB89302224D5A230094A21E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB89301224D5A230094A21E /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +186,8 @@
 		BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderedRoundedButton.xib; sourceTree = "<group>"; };
 		BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedRoundedButton.swift; sourceTree = "<group>"; };
 		BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextHolder.swift; sourceTree = "<group>"; };
+		BEB892FF224D4DF60094A21E /* NotebookDetailNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookDetailNavigationController.swift; sourceTree = "<group>"; };
+		BEB89301224D5A230094A21E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,7 @@
 				BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */,
 				BE2D2FE12236F8C900CBE228 /* Info.plist */,
 				BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */,
+				BEB89301224D5A230094A21E /* Notifications.swift */,
 			);
 			path = EcoDatumIOSApp;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				BE471A28224B26E600E041B8 /* NotebookMasterController.swift */,
 				BE471A2A224B277100E041B8 /* NotebookRootViewController.swift */,
 				BE471A2C224B27D800E041B8 /* NotebookDetailViewController.swift */,
+				BEB892FF224D4DF60094A21E /* NotebookDetailNavigationController.swift */,
 			);
 			path = Notebook;
 			sourceTree = "<group>";
@@ -674,7 +680,9 @@
 			files = (
 				BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */,
 				BE471A2B224B277100E041B8 /* NotebookRootViewController.swift in Sources */,
+				BEB89302224D5A230094A21E /* Notifications.swift in Sources */,
 				BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */,
+				BEB89300224D4DF60094A21E /* NotebookDetailNavigationController.swift in Sources */,
 				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
 				BE471A17224B1D6700E041B8 /* NotebookSplitViewController.swift in Sources */,
 				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,

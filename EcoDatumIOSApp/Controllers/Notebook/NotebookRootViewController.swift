@@ -8,6 +8,7 @@
 
 import CoreData
 import EcoDatumCoreData
+import EcoDatumService
 import Foundation
 import UIKit
 
@@ -94,7 +95,11 @@ class NotebookRootViewController: UITableViewController, CoreDataContextHolder {
         
         let confirmAction = UIAlertAction(title: "Save", style: .default) { _ in
             let name = newNotebookController.textFields![0].text!
-            if let exists = try? NotebookEntity.exists(self.context, with: name), exists {
+            do {
+                let notebook = try NotebookEntity.new(self.context, name: name)
+                try notebook.save()
+                self.tableView.reloadData()
+            } catch NotebookEntity.EntityError.NameAlreadyExists(let name) {
                 let notebookExistsController = UIAlertController(
                     title: "Conflict",
                     message: "Notebook with the name \(name) already exists.",
@@ -102,14 +107,8 @@ class NotebookRootViewController: UITableViewController, CoreDataContextHolder {
                 let okAction = UIAlertAction(title: "OK", style: .default) { (_) in }
                 notebookExistsController.addAction(okAction)
                 self.present(notebookExistsController, animated: true, completion: nil)
-            } else {
-                let notebook = NotebookEntity.new(self.context, name: name)
-                do {
-                    try notebook.save()
-                } catch let error as NSError {
-                    log.error("Failed to save new Notebook \(name): \(error)")
-                }
-                self.tableView.reloadData()
+            } catch let error as NSError {
+                log.error("Failed to save new Notebook \(name): \(error)")
             }
         }
         

@@ -14,8 +14,6 @@ import UIKit
 
 let log = SwiftyBeaver.self
 
-let DEFAULT_NOTEBOOK_NAME = "Default"
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -27,13 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let coreDataManager = CoreDataManager("EcoDatum")  {
             let context = coreDataManager.mainContext
             do {
-                if try !NotebookEntity.exists(context, with: DEFAULT_NOTEBOOK_NAME) {
-                    let context = coreDataManager.mainContext
-                    let notebook = NotebookEntity.new(context)
-                    try notebook.save()
-                }
+                let notebook = try NotebookEntity.new(context)
+                try notebook.save()
+            } catch NotebookEntity.EntityError.NameAlreadyExists(let name) {
+                log.debug("Notebook \(name) already exists")
             } catch let error as NSError {
-                log.error("Failed to create \(DEFAULT_NOTEBOOK_NAME) Notebook: \(error)")
+                log.error("Failed to create \(NotebookEntity.DEFAULT_NOTEBOOK_NAME) Notebook: \(error)")
             }
             
             if var vc = window?.rootViewController as? CoreDataContextHolder {

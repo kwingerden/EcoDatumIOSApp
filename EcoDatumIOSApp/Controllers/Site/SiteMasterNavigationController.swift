@@ -1,8 +1,8 @@
 //
-//  NotebookDetailNavigationController.swift
+//  SiteMasterNavigationController.swift
 //  EcoDatumIOSApp
 //
-//  Created by Kenneth Wingerden on 3/28/19.
+//  Created by Kenneth Wingerden on 3/29/19.
 //  Copyright © 2019 Kenneth Wingerden. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import CoreData
 import Foundation
 import UIKit
 
-class NotebookDetailNavigationController: UINavigationController, CoreDataContextHolder {
+class SiteMasterNavigationController: UINavigationController, CoreDataContextHolder {
     
     var context: NSManagedObjectContext! {
         willSet {
@@ -54,5 +54,5 @@ class NotebookDetailNavigationController: UINavigationController, CoreDataContex
         
         navigationBar.topItem?.title = name
     }
-
+    
 }

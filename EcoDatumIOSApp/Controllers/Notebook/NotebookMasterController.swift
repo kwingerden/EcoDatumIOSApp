@@ -16,8 +16,11 @@ class NotebookMasterController: UINavigationController, CoreDataContextHolder {
         willSet {
             log.debug("will set")
             for child in self.children {
-                var holder = child as! CoreDataContextHolder
-                holder.context = newValue
+                if var holder = child as? CoreDataContextHolder {
+                    holder.context = newValue
+                } else {
+                    log.warning("UIViewController \(child) not a CoreDataContextHolder")
+                }
             }
         }
     }

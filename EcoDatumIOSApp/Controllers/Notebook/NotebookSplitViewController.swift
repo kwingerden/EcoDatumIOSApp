@@ -22,8 +22,11 @@ class NotebookSplitViewController: UISplitViewController, CoreDataContextHolder 
         preferredDisplayMode = .allVisible
         
         for vc in viewControllers {
-            var holder = vc as! CoreDataContextHolder
-            holder.context = context
+            if var holder = vc as? CoreDataContextHolder {
+                holder.context = context
+            } else {
+                log.warning("UIViewController \(vc) is not a CoreDataContextHolder")
+            }
         }
     }
     

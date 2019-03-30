@@ -42,5 +42,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>EcoDatum needs access to the camera in order to take photos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>EcoDatum needs access to the photo library so that a photo can be chosen.</string>
 </dict>
 </plist>

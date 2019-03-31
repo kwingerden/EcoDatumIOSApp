@@ -140,9 +140,9 @@ class SitePhotoViewController: UIViewController {
             return
         }
         
-        let ecoDatum = EcoDatum(primaryType: PrimaryType.Biotic,
-                                secondaryType: SecondaryType.Photo,
-                                dataType: DataType.JPEG,
+        let ecoDatum = EcoDatum(primaryType: .Site,
+                                secondaryType: .Photo,
+                                dataType: .JPEG,
                                 dataValue: dataValue)
         do {
             let ecoDatumEntity = try EcoDatumEntity.new(context,

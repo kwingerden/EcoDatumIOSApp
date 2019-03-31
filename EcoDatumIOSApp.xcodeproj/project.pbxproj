@@ -40,6 +40,13 @@
 		BEB8930C224EA9780094A21E /* SiteMasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB8930B224EA9780094A21E /* SiteMasterTableViewCell.xib */; };
 		BEB8930E224EA9FC0094A21E /* SiteMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8930D224EA9FC0094A21E /* SiteMasterTableViewCell.swift */; };
 		BEB89310224F0CBE0094A21E /* SitePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8930F224F0CBE0094A21E /* SitePhotoViewController.swift */; };
+		BECE1FA222512996009CE092 /* TestNotebook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECE1FA122512996009CE092 /* TestNotebook.storyboard */; };
+		BECE1FA4225129CB009CE092 /* TestNotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE1FA3225129CB009CE092 /* TestNotebookViewController.swift */; };
+		BECE1FA622512AC2009CE092 /* TestNotebookNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE1FA522512AC2009CE092 /* TestNotebookNavigationController.swift */; };
+		BECE1FA922513757009CE092 /* TestNotebookFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BECE1FA822513757009CE092 /* TestNotebookFooterView.xib */; };
+		BECE1FAB2251376E009CE092 /* TestNotebookFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE1FAA2251376E009CE092 /* TestNotebookFooterView.swift */; };
+		BECE1FAD22513A01009CE092 /* TestNotebookHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BECE1FAC22513A01009CE092 /* TestNotebookHeaderView.xib */; };
+		BECE1FAF22513A1E009CE092 /* TestNotebookHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE1FAE22513A1E009CE092 /* TestNotebookHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +203,13 @@
 		BEB8930B224EA9780094A21E /* SiteMasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiteMasterTableViewCell.xib; sourceTree = "<group>"; };
 		BEB8930D224EA9FC0094A21E /* SiteMasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMasterTableViewCell.swift; sourceTree = "<group>"; };
 		BEB8930F224F0CBE0094A21E /* SitePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitePhotoViewController.swift; sourceTree = "<group>"; };
+		BECE1FA122512996009CE092 /* TestNotebook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestNotebook.storyboard; sourceTree = "<group>"; };
+		BECE1FA3225129CB009CE092 /* TestNotebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNotebookViewController.swift; sourceTree = "<group>"; };
+		BECE1FA522512AC2009CE092 /* TestNotebookNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNotebookNavigationController.swift; sourceTree = "<group>"; };
+		BECE1FA822513757009CE092 /* TestNotebookFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestNotebookFooterView.xib; sourceTree = "<group>"; };
+		BECE1FAA2251376E009CE092 /* TestNotebookFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNotebookFooterView.swift; sourceTree = "<group>"; };
+		BECE1FAC22513A01009CE092 /* TestNotebookHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestNotebookHeaderView.xib; sourceTree = "<group>"; };
+		BECE1FAE22513A1E009CE092 /* TestNotebookHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNotebookHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +376,7 @@
 		BE2D3049223705F600CBE228 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				BECE1F9C2251294A009CE092 /* Notebook */,
 				BE2D305C22386EB600CBE228 /* SplitView */,
 				BE2D304A2237060C00CBE228 /* Location */,
 			);
@@ -463,6 +478,28 @@
 				BEB8930D224EA9FC0094A21E /* SiteMasterTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BECE1F9C2251294A009CE092 /* Notebook */ = {
+			isa = PBXGroup;
+			children = (
+				BECE1FA722513738009CE092 /* views */,
+				BECE1FA122512996009CE092 /* TestNotebook.storyboard */,
+				BECE1FA3225129CB009CE092 /* TestNotebookViewController.swift */,
+				BECE1FA522512AC2009CE092 /* TestNotebookNavigationController.swift */,
+			);
+			path = Notebook;
+			sourceTree = "<group>";
+		};
+		BECE1FA722513738009CE092 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BECE1FA822513757009CE092 /* TestNotebookFooterView.xib */,
+				BECE1FAA2251376E009CE092 /* TestNotebookFooterView.swift */,
+				BECE1FAC22513A01009CE092 /* TestNotebookHeaderView.xib */,
+				BECE1FAE22513A1E009CE092 /* TestNotebookHeaderView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -655,11 +692,14 @@
 				BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */,
 				BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */,
 				BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */,
+				BECE1FA222512996009CE092 /* TestNotebook.storyboard in Resources */,
+				BECE1FAD22513A01009CE092 /* TestNotebookHeaderView.xib in Resources */,
 				BEB89305224EA30D0094A21E /* Site.storyboard in Resources */,
 				BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */,
 				BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */,
 				BEB8930C224EA9780094A21E /* SiteMasterTableViewCell.xib in Resources */,
 				BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */,
+				BECE1FA922513757009CE092 /* TestNotebookFooterView.xib in Resources */,
 				BE2D304E2237064400CBE228 /* TestLocation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,13 +749,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */,
+				BECE1FA622512AC2009CE092 /* TestNotebookNavigationController.swift in Sources */,
+				BECE1FAB2251376E009CE092 /* TestNotebookFooterView.swift in Sources */,
 				BE471A2B224B277100E041B8 /* NotebookRootViewController.swift in Sources */,
 				BEB89302224D5A230094A21E /* Notifications.swift in Sources */,
 				BEB89310224F0CBE0094A21E /* SitePhotoViewController.swift in Sources */,
+				BECE1FAF22513A1E009CE092 /* TestNotebookHeaderView.swift in Sources */,
 				BEB8930E224EA9FC0094A21E /* SiteMasterTableViewCell.swift in Sources */,
 				BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */,
 				BEB89307224EA6EE0094A21E /* SiteMasterViewController.swift in Sources */,
 				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
+				BECE1FA4225129CB009CE092 /* TestNotebookViewController.swift in Sources */,
 				BE471A17224B1D6700E041B8 /* NotebookSplitViewController.swift in Sources */,
 				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,
 				BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */,

@@ -23,6 +23,10 @@ class SiteMasterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateTextField: UITextField!
     
+    @IBOutlet weak var latitudeTextField: UITextField!
+    
+    @IBOutlet weak var longitudeTextField: UITextField!
+    
     var indexPath: IndexPath!
     
     private var context: NSManagedObjectContext!
@@ -61,16 +65,15 @@ class SiteMasterTableViewCell: UITableViewCell {
         siteNameLabel.text = name
         dateTextField.text = createdDate.mediumFormatString()
         
-        siteImageView.isUserInteractionEnabled = true
         siteImageView.addGestureRecognizer(UITapGestureRecognizer(
             target: self,
             action: #selector(siteImageViewTapped)))
-        
+
         do {
             let ecoDatum = try EcoDatumEntity.first(context,
                                                     with: siteName,
                                                     in: notebookName,
-                                                    with: .Biotic,
+                                                    with: .Site,
                                                     with: .Photo,
                                                     with: .JPEG)
             if let ecoDatum = ecoDatum,
@@ -91,7 +94,7 @@ class SiteMasterTableViewCell: UITableViewCell {
         log.debug("siteImageViewTapped")
         performSegue("choosePhoto", self)
     }
-    
+
 }
 
 extension SiteMasterTableViewCell: UIImagePickerControllerDelegate {

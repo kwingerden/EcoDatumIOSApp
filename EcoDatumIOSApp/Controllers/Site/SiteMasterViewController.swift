@@ -72,11 +72,17 @@ class SiteDetailViewController: UITableViewController, CoreDataContextHolder {
                 log.error("Notebook name should not be nil")
                 return
             }
-            sitePhotoViewController.setContext(context,
-                                               with: siteName,
-                                               in: notebookName,
-                                               target: cell.siteImageView)
-        
+            
+            sitePhotoViewController.setContext(
+                context,
+                with: siteName,
+                with: cell.siteImageView.image,
+                in: notebookName) {
+                    self.tableView.beginUpdates()
+                    self.tableView.reloadRows(at: [cell.indexPath], with: .automatic)
+                    self.tableView.endUpdates()
+            }
+            
         default:
             log.error("Unexpected segue destination \(segue.destination)")
         }
@@ -122,6 +128,7 @@ class SiteDetailViewController: UITableViewController, CoreDataContextHolder {
                 let siteName = siteNames[indexPath.row]
                 do {
                     try cell.setContext(context,
+                                        indexPath: indexPath,
                                         with: siteName,
                                         in: notebookName,
                                         performSegue: self.performSegue)

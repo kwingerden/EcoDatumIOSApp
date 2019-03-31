@@ -8,6 +8,7 @@
 
 import CoreData
 import EcoDatumCoreData
+import EcoDatumModel
 import EcoDatumService
 import Foundation
 import UIKit
@@ -22,6 +23,8 @@ class SiteMasterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateTextField: UITextField!
     
+    var indexPath: IndexPath!
+    
     private var context: NSManagedObjectContext!
     
     private var siteName: String!
@@ -35,10 +38,12 @@ class SiteMasterTableViewCell: UITableViewCell {
     }
     
     func setContext(_ context: NSManagedObjectContext,
+                    indexPath: IndexPath,
                     with siteName: String,
                     in notebookName: String,
                     performSegue: @escaping (String, Any?) -> Void) throws {
         self.context = context
+        self.indexPath = indexPath
         self.siteName = siteName
         self.notebookName = notebookName
         self.performSegue = performSegue
@@ -60,6 +65,26 @@ class SiteMasterTableViewCell: UITableViewCell {
         siteImageView.addGestureRecognizer(UITapGestureRecognizer(
             target: self,
             action: #selector(siteImageViewTapped)))
+        
+        do {
+            let ecoDatum = try EcoDatumEntity.first(context,
+                                                    with: siteName,
+                                                    in: notebookName,
+                                                    with: .Biotic,
+                                                    with: .Photo,
+                                                    with: .JPEG)
+            if let ecoDatum = ecoDatum,
+                let dataValue = ecoDatum.dataValue,
+                let base64Encoded = String(data: dataValue, encoding: .utf8),
+                let image = base64Encoded.base64DecodeUIImage() {
+                siteImageView.image = image
+            } else {
+                siteImageView.image = UIImage(named: "PlaceholderImage")
+            }
+        } catch let error as NSError {
+            log.error("Failed to find first site photo in Site \(siteName) in \(notebookName): \(error)")
+            siteImageView.image = UIImage(named: "PlaceholderImage")
+        }
     }
     
     @objc func siteImageViewTapped() {

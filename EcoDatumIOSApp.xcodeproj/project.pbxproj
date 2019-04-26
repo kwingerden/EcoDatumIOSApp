@@ -32,6 +32,9 @@
 		BE4BF705224098EE00AAE0DA /* EcoDatumService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */; };
 		BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */; };
+		BEB18A0E227292170019146C /* CarbonSink.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB18A0D227292170019146C /* CarbonSink.storyboard */; };
+		BEB18A10227295590019146C /* CarbonSinkMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */; };
+		BEB18A12227295B30019146C /* CarbonSinkTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */; };
 		BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */; };
 		BEB89302224D5A230094A21E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB89301224D5A230094A21E /* Notifications.swift */; };
 		BEB89305224EA30D0094A21E /* Site.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB89304224EA30D0094A21E /* Site.storyboard */; };
@@ -195,6 +198,9 @@
 		BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumService.xcodeproj; path = ../EcoDatumService/EcoDatumService.xcodeproj; sourceTree = "<group>"; };
 		BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderedRoundedButton.xib; sourceTree = "<group>"; };
 		BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedRoundedButton.swift; sourceTree = "<group>"; };
+		BEB18A0D227292170019146C /* CarbonSink.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarbonSink.storyboard; sourceTree = "<group>"; };
+		BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkMainViewController.swift; sourceTree = "<group>"; };
+		BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkTableCellView.swift; sourceTree = "<group>"; };
 		BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextHolder.swift; sourceTree = "<group>"; };
 		BEB89301224D5A230094A21E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		BEB89304224EA30D0094A21E /* Site.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Site.storyboard; sourceTree = "<group>"; };
@@ -338,6 +344,7 @@
 		BE2D3045223703CB00CBE228 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BEB18A08227291FD0019146C /* CarbonSink */,
 				BEB89303224EA2F40094A21E /* Site */,
 				BE2D304F2237073700CBE228 /* Launch */,
 				BE2D3049223705F600CBE228 /* Test */,
@@ -457,6 +464,16 @@
 				BE4BF703224098AE00AAE0DA /* EcoDatumServiceTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BEB18A08227291FD0019146C /* CarbonSink */ = {
+			isa = PBXGroup;
+			children = (
+				BEB18A0D227292170019146C /* CarbonSink.storyboard */,
+				BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */,
+				BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */,
+			);
+			path = CarbonSink;
 			sourceTree = "<group>";
 		};
 		BEB89303224EA2F40094A21E /* Site */ = {
@@ -697,6 +714,7 @@
 				BEB89305224EA30D0094A21E /* Site.storyboard in Resources */,
 				BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */,
 				BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */,
+				BEB18A0E227292170019146C /* CarbonSink.storyboard in Resources */,
 				BEB8930C224EA9780094A21E /* SiteMasterTableViewCell.xib in Resources */,
 				BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */,
 				BECE1FA922513757009CE092 /* TestNotebookFooterView.xib in Resources */,
@@ -757,6 +775,7 @@
 				BECE1FAF22513A1E009CE092 /* TestNotebookHeaderView.swift in Sources */,
 				BEB8930E224EA9FC0094A21E /* SiteMasterTableViewCell.swift in Sources */,
 				BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */,
+				BEB18A10227295590019146C /* CarbonSinkMainViewController.swift in Sources */,
 				BEB89307224EA6EE0094A21E /* SiteMasterViewController.swift in Sources */,
 				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
 				BECE1FA4225129CB009CE092 /* TestNotebookViewController.swift in Sources */,
@@ -764,6 +783,7 @@
 				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,
 				BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */,
 				BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */,
+				BEB18A12227295B30019146C /* CarbonSinkTableCellView.swift in Sources */,
 				BEB89309224EA8510094A21E /* SiteMasterNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

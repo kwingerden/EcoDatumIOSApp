@@ -11,6 +11,16 @@ import UIKit
 
 class CarbonSinkTableCellView: UITableViewCell {
     
+    var index: Int!
+    
+    var controller: CarbonSinkMainViewController!
+    
     @IBOutlet weak var treeImage: UIImageView!
+    
+    @IBOutlet weak var treeSegmentedControl: UISegmentedControl!
+
+    @IBAction func treePressed(_ sender: UISegmentedControl) {
+        controller.updateCell(self)
+    }
     
 }

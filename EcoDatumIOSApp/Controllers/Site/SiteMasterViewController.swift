@@ -185,7 +185,7 @@ class SiteDetailViewController: UITableViewController, CoreDataContextHolder {
                                               in: notebookName)
                 try site.save()
                 self.tableView.reloadData()
-            } catch SiteEntity.EntityError.NotebookDoesNotExist(let name) {
+            } catch SiteEntity.ServiceError.NotebookDoesNotExist(let name) {
                 log.error("Notebook with name: \(name) does not exist")
             } catch SiteEntity.EntityError.NameAlreadyExists(let name) {
                 let siteExistsController = UIAlertController(

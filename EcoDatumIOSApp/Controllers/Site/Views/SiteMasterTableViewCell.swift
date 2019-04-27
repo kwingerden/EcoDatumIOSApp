@@ -71,8 +71,8 @@ class SiteMasterTableViewCell: UITableViewCell {
 
         do {
             let ecoDatum = try EcoDatumEntity.first(context,
-                                                    with: siteName,
                                                     in: notebookName,
+                                                    in: siteName,
                                                     with: .Site,
                                                     with: .Photo,
                                                     with: .JPEG)

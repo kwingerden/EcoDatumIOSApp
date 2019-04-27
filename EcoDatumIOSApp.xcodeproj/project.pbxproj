@@ -35,6 +35,7 @@
 		BEB18A0E227292170019146C /* CarbonSink.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB18A0D227292170019146C /* CarbonSink.storyboard */; };
 		BEB18A10227295590019146C /* CarbonSinkMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */; };
 		BEB18A12227295B30019146C /* CarbonSinkTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */; };
+		BEB18A142273A4020019146C /* CarbonSinkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A132273A4020019146C /* CarbonSinkNavigationController.swift */; };
 		BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */; };
 		BEB89302224D5A230094A21E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB89301224D5A230094A21E /* Notifications.swift */; };
 		BEB89305224EA30D0094A21E /* Site.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB89304224EA30D0094A21E /* Site.storyboard */; };
@@ -201,6 +202,7 @@
 		BEB18A0D227292170019146C /* CarbonSink.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarbonSink.storyboard; sourceTree = "<group>"; };
 		BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkMainViewController.swift; sourceTree = "<group>"; };
 		BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkTableCellView.swift; sourceTree = "<group>"; };
+		BEB18A132273A4020019146C /* CarbonSinkNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkNavigationController.swift; sourceTree = "<group>"; };
 		BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextHolder.swift; sourceTree = "<group>"; };
 		BEB89301224D5A230094A21E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		BEB89304224EA30D0094A21E /* Site.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Site.storyboard; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 				BEB18A0D227292170019146C /* CarbonSink.storyboard */,
 				BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */,
 				BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */,
+				BEB18A132273A4020019146C /* CarbonSinkNavigationController.swift */,
 			);
 			path = CarbonSink;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */,
+				BEB18A142273A4020019146C /* CarbonSinkNavigationController.swift in Sources */,
 				BECE1FA622512AC2009CE092 /* TestNotebookNavigationController.swift in Sources */,
 				BECE1FAB2251376E009CE092 /* TestNotebookFooterView.swift in Sources */,
 				BE471A2B224B277100E041B8 /* NotebookRootViewController.swift in Sources */,

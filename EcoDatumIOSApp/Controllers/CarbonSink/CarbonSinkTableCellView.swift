@@ -11,16 +11,43 @@ import UIKit
 
 class CarbonSinkTableCellView: UITableViewCell {
     
-    var index: Int!
-    
-    var controller: CarbonSinkMainViewController!
-    
-    @IBOutlet weak var treeImage: UIImageView!
-    
-    @IBOutlet weak var treeSegmentedControl: UISegmentedControl!
-
-    @IBAction func treePressed(_ sender: UISegmentedControl) {
-        controller.updateCell(self)
+    var model: CarbonSinkTableCellModel! {
+        didSet {
+            updateView()
+        }
     }
     
+    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var segmentedControlWidth: NSLayoutConstraint!
+    
+    @IBAction func segmentedControlPressed() {
+        model.selectedView = CarbonSinkTableCellModel.View(
+            rawValue: segmentedControl.selectedSegmentIndex)!
+        updateView()
+    }
+    
+    override func layoutSubviews() {
+        segmentedControlWidth.constant = bounds.width * 0.50
+    }
+    
+    private func updateView() {
+        mainView.subviews.forEach({$0.removeFromSuperview()})
+        
+        var subView: UIView
+        switch model.selectedView {
+        case .Tree:
+            subView = model.treeImageView
+        case .Map:
+            subView = model.mapImageView
+        case .Data:
+            subView = model.dataView
+        }
+        
+        mainView.addSubview(subView)
+        
+        segmentedControl.selectedSegmentIndex = model.selectedView.rawValue
+    }
 }

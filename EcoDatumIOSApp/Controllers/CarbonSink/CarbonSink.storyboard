@@ -13,7 +13,7 @@
         <scene sceneID="W6H-bg-SYC">
             <objects>
                 <tableViewController title="Carbon Sink - ERHS" id="LC5-th-Tsq" customClass="CarbonSinkMainViewController" customModule="EcoDatumIOSApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="618" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dZZ-1q-AHd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="618" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dZZ-1q-AHd">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -26,42 +26,46 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-k5-YRR">
-                                            <rect key="frame" x="120" y="11" width="528" height="565"/>
+                                            <rect key="frame" x="28" y="19" width="712" height="804"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uBg-tn-nXt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="528" height="528"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="uBg-tn-nXt" secondAttribute="height" multiplier="1:1" id="nXV-F6-Uqt"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jY-lk-o9D">
+                                                    <rect key="frame" x="0.0" y="0.0" width="712" height="767"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iAt-w9-bXM">
-                                                    <rect key="frame" x="197.5" y="537" width="133" height="29"/>
+                                                    <rect key="frame" x="290.5" y="776" width="131" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="131" id="HlI-80-cnd"/>
+                                                        <constraint firstAttribute="height" constant="28" id="O6s-0R-YFF"/>
+                                                    </constraints>
                                                     <segments>
                                                         <segment title="Tree"/>
-                                                        <segment title="Location"/>
+                                                        <segment title="Map"/>
+                                                        <segment title="Data"/>
                                                     </segments>
                                                     <connections>
-                                                        <action selector="treePressed:" destination="xc1-a3-EzH" eventType="valueChanged" id="ucj-Td-6WR"/>
+                                                        <action selector="segmentedControlPressed" destination="xc1-a3-EzH" eventType="valueChanged" id="L0g-pv-orD"/>
                                                     </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="uBg-tn-nXt" firstAttribute="top" secondItem="lfZ-k5-YRR" secondAttribute="top" id="BwS-lo-k00"/>
-                                                <constraint firstItem="uBg-tn-nXt" firstAttribute="leading" secondItem="lfZ-k5-YRR" secondAttribute="leading" id="Nc8-Ss-FTJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="uBg-tn-nXt" secondAttribute="trailing" id="PQ2-WF-WsY"/>
+                                                <constraint firstItem="3jY-lk-o9D" firstAttribute="top" secondItem="lfZ-k5-YRR" secondAttribute="top" id="3mW-Oh-gs9"/>
+                                                <constraint firstAttribute="trailing" secondItem="3jY-lk-o9D" secondAttribute="trailing" id="Ohy-FU-Jmz"/>
+                                                <constraint firstItem="3jY-lk-o9D" firstAttribute="leading" secondItem="lfZ-k5-YRR" secondAttribute="leading" id="nfP-qR-vcv"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="lfZ-k5-YRR" firstAttribute="top" secondItem="IeV-P5-v1F" secondAttribute="topMargin" id="I8b-HZ-vOY"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="lfZ-k5-YRR" secondAttribute="trailing" constant="100" id="JJ3-Fp-8Sb"/>
-                                        <constraint firstItem="lfZ-k5-YRR" firstAttribute="leading" secondItem="IeV-P5-v1F" secondAttribute="leadingMargin" constant="100" id="XyY-Dh-h9H"/>
-                                        <constraint firstItem="lfZ-k5-YRR" firstAttribute="centerX" secondItem="IeV-P5-v1F" secondAttribute="centerX" id="hXK-a6-NGf"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lfZ-k5-YRR" secondAttribute="bottom" constant="8" id="43Y-aV-QKt"/>
+                                        <constraint firstItem="lfZ-k5-YRR" firstAttribute="leading" secondItem="IeV-P5-v1F" secondAttribute="leadingMargin" constant="8" id="Gy6-81-Exb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lfZ-k5-YRR" secondAttribute="trailing" constant="8" id="hdd-ek-ZVV"/>
+                                        <constraint firstItem="lfZ-k5-YRR" firstAttribute="top" secondItem="IeV-P5-v1F" secondAttribute="topMargin" constant="8" id="iVD-7l-MRb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="treeImage" destination="uBg-tn-nXt" id="vsW-Qt-MFO"/>
-                                    <outlet property="treeSegmentedControl" destination="iAt-w9-bXM" id="hVT-uf-bFy"/>
+                                    <outlet property="mainView" destination="3jY-lk-o9D" id="CC8-9h-4Xg"/>
+                                    <outlet property="segmentedControl" destination="iAt-w9-bXM" id="oRV-b3-J6g"/>
+                                    <outlet property="segmentedControlWidth" destination="HlI-80-cnd" id="GjK-YU-W4Q"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZD-dy-Xih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660.9375" y="114.84375"/>
+            <point key="canvasLocation" x="623" y="29"/>
         </scene>
         <!--Carbon Sink Navigation Controller-->
         <scene sceneID="1lp-KZ-3jn">

@@ -41,6 +41,9 @@
 		BEB18A1D2273F4D80019146C /* CarbonSinkDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB18A1C2273F4D80019146C /* CarbonSinkDataView.xib */; };
 		BEB18A1F2273F4F70019146C /* CarbonSinkDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A1E2273F4F70019146C /* CarbonSinkDataView.swift */; };
 		BEB18A232273F61B0019146C /* CarbonSinkTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A222273F61A0019146C /* CarbonSinkTableCellModel.swift */; };
+		BEB18A26227658BC0019146C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB18A25227658BC0019146C /* Main.storyboard */; };
+		BEB18A28227659060019146C /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A27227659060019146C /* MainNavigationController.swift */; };
+		BEB18A2A227659A60019146C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A29227659A60019146C /* MainViewController.swift */; };
 		BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */; };
 		BEB89302224D5A230094A21E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB89301224D5A230094A21E /* Notifications.swift */; };
 		BEB89305224EA30D0094A21E /* Site.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB89304224EA30D0094A21E /* Site.storyboard */; };
@@ -213,6 +216,9 @@
 		BEB18A1C2273F4D80019146C /* CarbonSinkDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarbonSinkDataView.xib; sourceTree = "<group>"; };
 		BEB18A1E2273F4F70019146C /* CarbonSinkDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDataView.swift; sourceTree = "<group>"; };
 		BEB18A222273F61A0019146C /* CarbonSinkTableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbonSinkTableCellModel.swift; sourceTree = "<group>"; };
+		BEB18A25227658BC0019146C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BEB18A27227659060019146C /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		BEB18A29227659A60019146C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextHolder.swift; sourceTree = "<group>"; };
 		BEB89301224D5A230094A21E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		BEB89304224EA30D0094A21E /* Site.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Site.storyboard; sourceTree = "<group>"; };
@@ -356,6 +362,7 @@
 		BE2D3045223703CB00CBE228 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BEB18A24227658AA0019146C /* Main */,
 				BEB18A08227291FD0019146C /* CarbonSink */,
 				BEB89303224EA2F40094A21E /* Site */,
 				BE2D304F2237073700CBE228 /* Launch */,
@@ -500,6 +507,16 @@
 				BEB18A1E2273F4F70019146C /* CarbonSinkDataView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BEB18A24227658AA0019146C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BEB18A25227658BC0019146C /* Main.storyboard */,
+				BEB18A27227659060019146C /* MainNavigationController.swift */,
+				BEB18A29227659A60019146C /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		BEB89303224EA2F40094A21E /* Site */ = {
@@ -743,6 +760,7 @@
 				BEB18A1D2273F4D80019146C /* CarbonSinkDataView.xib in Resources */,
 				BEB18A0E227292170019146C /* CarbonSink.storyboard in Resources */,
 				BEB8930C224EA9780094A21E /* SiteMasterTableViewCell.xib in Resources */,
+				BEB18A26227658BC0019146C /* Main.storyboard in Resources */,
 				BEB18A192273F3740019146C /* CarbonSinkImageView.xib in Resources */,
 				BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */,
 				BECE1FA922513757009CE092 /* TestNotebookFooterView.xib in Resources */,
@@ -804,9 +822,11 @@
 				BECE1FAF22513A1E009CE092 /* TestNotebookHeaderView.swift in Sources */,
 				BEB8930E224EA9FC0094A21E /* SiteMasterTableViewCell.swift in Sources */,
 				BEB18A1B2273F4B00019146C /* CarbonSinkImageView.swift in Sources */,
+				BEB18A28227659060019146C /* MainNavigationController.swift in Sources */,
 				BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */,
 				BEB18A10227295590019146C /* CarbonSinkMainViewController.swift in Sources */,
 				BEB89307224EA6EE0094A21E /* SiteMasterViewController.swift in Sources */,
+				BEB18A2A227659A60019146C /* MainViewController.swift in Sources */,
 				BE2D30512237087A00CBE228 /* TestLocationController.swift in Sources */,
 				BECE1FA4225129CB009CE092 /* TestNotebookViewController.swift in Sources */,
 				BE471A17224B1D6700E041B8 /* NotebookSplitViewController.swift in Sources */,

@@ -14,19 +14,8 @@ import UIKit
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var button: UIButton!
     
-    /*
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
- */
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("awke")
         initNib()
     }
     

@@ -18,6 +18,8 @@ class CarbonSinkMainViewController: UITableViewController, CoreDataContextHolder
     
     var context: NSManagedObjectContext!
     
+    @IBOutlet weak var doneButton: UIBarButtonItem!
+    
     private var models: [CarbonSinkTableCellModel] = []
     
     private let NOTEBOOK_NAME = "ERHS Carbon Sink - 2019"
@@ -82,6 +84,14 @@ class CarbonSinkMainViewController: UITableViewController, CoreDataContextHolder
         }
     }
 
+    @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
+        if sender == doneButton {
+            dismiss(animated: true, completion: nil)
+        } else {
+            log.error("Unknown button \(sender)")
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if UIDevice.current.orientation.isLandscape {
             return view.frame.height - 100.0

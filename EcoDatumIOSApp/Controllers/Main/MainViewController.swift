@@ -30,9 +30,11 @@ class MainViewController: UIViewController, CoreDataContextHolder {
         
         carbonSinkERHSButton.layer.borderWidth = 1
         carbonSinkERHSButton.layer.borderColor = EDRichBlack.cgColor
+        carbonSinkERHSButton.layer.cornerRadius = 15
         
         amazonButton.layer.borderWidth = 1
         amazonButton.layer.borderColor = EDRichBlack.cgColor
+        amazonButton.layer.cornerRadius = 15
     
         updateLayout()
     }

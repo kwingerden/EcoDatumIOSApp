@@ -20,15 +20,12 @@ class CarbonSinkMainViewController: UITableViewController, CoreDataContextHolder
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
-    private var models: [CarbonSinkTableCellModel] = []
+    private var sites: [SiteEntity] = []
     
     private let NOTEBOOK_NAME = "ERHS Carbon Sink - 2019"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let imageViewNib = UINib.init(nibName: "CarbonSinkImageView", bundle: nil)
-        let dataViewNib = UINib.init(nibName: "CarbonSinkDataView", bundle: nil)
         
         var notebook: NotebookEntity?
         do {
@@ -50,34 +47,15 @@ class CarbonSinkMainViewController: UITableViewController, CoreDataContextHolder
         
         for index in 1...10 {
             do {
-                var siteEntity = try notebook?.findSite(by: "Tree \(index)")
-                if siteEntity == nil {
-                    siteEntity = try SiteEntity.new(
+                var site = try notebook?.findSite(by: "Tree \(index)")
+                if site == nil {
+                    site = try SiteEntity.new(
                         context,
                         name: "Tree \(index)",
                         in: notebook)
-                    try siteEntity!.save()
+                    try site!.save()
                 }
-                
-                let treeImageView = imageViewNib.instantiate(
-                    withOwner: nil, options: nil)[0] as! CarbonSinkImageView
-                treeImageView.imageView.image = UIImage(named: "tree_\(index)_tree")!
-                
-                let mapImageView = imageViewNib.instantiate(
-                    withOwner: nil, options: nil)[0] as! CarbonSinkImageView
-                mapImageView.imageView.image = UIImage(named: "tree_\(index)_map")!
-                
-                let dataView = dataViewNib.instantiate(
-                    withOwner: nil, options: nil)[0] as! CarbonSinkDataView
-                
-                let model = CarbonSinkTableCellModel(
-                    index: index,
-                    siteEntity: siteEntity!,
-                    treeImageView: treeImageView,
-                    mapImageView: mapImageView,
-                    dataView: dataView,
-                    selectedView: .Tree)
-                models.append(model)
+                sites.append(site!)
             } catch let error as NSError {
                 log.error("Failed to add site \(index): \(error)")
             }
@@ -92,37 +70,21 @@ class CarbonSinkMainViewController: UITableViewController, CoreDataContextHolder
         }
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if UIDevice.current.orientation.isLandscape {
-            return view.frame.height - 100.0
-        } else {
-            return view.frame.height * 0.7
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return models[section].siteEntity.name!
-    }
-    
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return models.map({$0.siteEntity.name!})
-    }
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return models.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return sites.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! CarbonSinkTableCellView
-        cell.model = models[indexPath.section]
+        cell.thumbnailImageView.image = UIImage(named: "tree_\(indexPath.row + 1)_tree")
         return cell
     }
     

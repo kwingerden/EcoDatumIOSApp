@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE023340227A9060006F3E7E /* CarbonSinkPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02333F227A9060006F3E7E /* CarbonSinkPhotoViewController.swift */; };
+		BE023342227A9076006F3E7E /* CarbonSinkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023341227A9076006F3E7E /* CarbonSinkMapViewController.swift */; };
+		BE023344227A9091006F3E7E /* CarbonSinkDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023343227A9091006F3E7E /* CarbonSinkDataViewController.swift */; };
+		BE023346227A9D37006F3E7E /* SiteEntityHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023345227A9D37006F3E7E /* SiteEntityHolder.swift */; };
 		BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */; };
 		BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FD92236F8C800CBE228 /* Notebook.storyboard */; };
 		BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */; };
@@ -32,9 +36,11 @@
 		BE4BF705224098EE00AAE0DA /* EcoDatumService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */; };
 		BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */; };
+		BE82021F2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82021E2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift */; };
+		BE8202212277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8202202277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift */; };
 		BEB18A0E227292170019146C /* CarbonSink.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB18A0D227292170019146C /* CarbonSink.storyboard */; };
 		BEB18A10227295590019146C /* CarbonSinkMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */; };
-		BEB18A12227295B30019146C /* CarbonSinkTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */; };
+		BEB18A12227295B30019146C /* CarbonSinkCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A11227295B30019146C /* CarbonSinkCellView.swift */; };
 		BEB18A142273A4020019146C /* CarbonSinkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A132273A4020019146C /* CarbonSinkNavigationController.swift */; };
 		BEB18A192273F3740019146C /* CarbonSinkImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB18A182273F3740019146C /* CarbonSinkImageView.xib */; };
 		BEB18A1B2273F4B00019146C /* CarbonSinkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB18A1A2273F4B00019146C /* CarbonSinkImageView.swift */; };
@@ -180,6 +186,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE02333F227A9060006F3E7E /* CarbonSinkPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkPhotoViewController.swift; sourceTree = "<group>"; };
+		BE023341227A9076006F3E7E /* CarbonSinkMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkMapViewController.swift; sourceTree = "<group>"; };
+		BE023343227A9091006F3E7E /* CarbonSinkDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDataViewController.swift; sourceTree = "<group>"; };
+		BE023345227A9D37006F3E7E /* SiteEntityHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteEntityHolder.swift; sourceTree = "<group>"; };
 		BE2D2FD22236F8C800CBE228 /* EcoDatumIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoDatumIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2D2FDA2236F8C800CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notebook.storyboard; sourceTree = "<group>"; };
@@ -207,9 +217,11 @@
 		BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumService.xcodeproj; path = ../EcoDatumService/EcoDatumService.xcodeproj; sourceTree = "<group>"; };
 		BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderedRoundedButton.xib; sourceTree = "<group>"; };
 		BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedRoundedButton.swift; sourceTree = "<group>"; };
+		BE82021E2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkScanCodeViewController.swift; sourceTree = "<group>"; };
+		BE8202202277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDetailTabBarController.swift; sourceTree = "<group>"; };
 		BEB18A0D227292170019146C /* CarbonSink.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarbonSink.storyboard; sourceTree = "<group>"; };
 		BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkMainViewController.swift; sourceTree = "<group>"; };
-		BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkTableCellView.swift; sourceTree = "<group>"; };
+		BEB18A11227295B30019146C /* CarbonSinkCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkCellView.swift; sourceTree = "<group>"; };
 		BEB18A132273A4020019146C /* CarbonSinkNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkNavigationController.swift; sourceTree = "<group>"; };
 		BEB18A182273F3740019146C /* CarbonSinkImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarbonSinkImageView.xib; sourceTree = "<group>"; };
 		BEB18A1A2273F4B00019146C /* CarbonSinkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkImageView.swift; sourceTree = "<group>"; };
@@ -299,6 +311,7 @@
 				BE2D2FE12236F8C900CBE228 /* Info.plist */,
 				BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */,
 				BEB89301224D5A230094A21E /* Notifications.swift */,
+				BE023345227A9D37006F3E7E /* SiteEntityHolder.swift */,
 			);
 			path = EcoDatumIOSApp;
 			sourceTree = "<group>";
@@ -492,8 +505,13 @@
 				BEB18A172273F3500019146C /* Views */,
 				BEB18A0D227292170019146C /* CarbonSink.storyboard */,
 				BEB18A0F227295590019146C /* CarbonSinkMainViewController.swift */,
-				BEB18A11227295B30019146C /* CarbonSinkTableCellView.swift */,
+				BEB18A11227295B30019146C /* CarbonSinkCellView.swift */,
 				BEB18A132273A4020019146C /* CarbonSinkNavigationController.swift */,
+				BE82021E2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift */,
+				BE8202202277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift */,
+				BE02333F227A9060006F3E7E /* CarbonSinkPhotoViewController.swift */,
+				BE023341227A9076006F3E7E /* CarbonSinkMapViewController.swift */,
+				BE023343227A9091006F3E7E /* CarbonSinkDataViewController.swift */,
 			);
 			path = CarbonSink;
 			sourceTree = "<group>";
@@ -820,10 +838,13 @@
 				BEB89302224D5A230094A21E /* Notifications.swift in Sources */,
 				BEB89310224F0CBE0094A21E /* SitePhotoViewController.swift in Sources */,
 				BECE1FAF22513A1E009CE092 /* TestNotebookHeaderView.swift in Sources */,
+				BE82021F2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift in Sources */,
 				BEB8930E224EA9FC0094A21E /* SiteMasterTableViewCell.swift in Sources */,
+				BE023342227A9076006F3E7E /* CarbonSinkMapViewController.swift in Sources */,
 				BEB18A1B2273F4B00019146C /* CarbonSinkImageView.swift in Sources */,
 				BEB18A28227659060019146C /* MainNavigationController.swift in Sources */,
 				BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */,
+				BE023344227A9091006F3E7E /* CarbonSinkDataViewController.swift in Sources */,
 				BEB18A10227295590019146C /* CarbonSinkMainViewController.swift in Sources */,
 				BEB89307224EA6EE0094A21E /* SiteMasterViewController.swift in Sources */,
 				BEB18A2A227659A60019146C /* MainViewController.swift in Sources */,
@@ -834,9 +855,12 @@
 				BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */,
 				BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */,
 				BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */,
-				BEB18A12227295B30019146C /* CarbonSinkTableCellView.swift in Sources */,
+				BEB18A12227295B30019146C /* CarbonSinkCellView.swift in Sources */,
 				BEB89309224EA8510094A21E /* SiteMasterNavigationController.swift in Sources */,
+				BE023346227A9D37006F3E7E /* SiteEntityHolder.swift in Sources */,
+				BE023340227A9060006F3E7E /* CarbonSinkPhotoViewController.swift in Sources */,
 				BEB18A232273F61B0019146C /* CarbonSinkTableCellModel.swift in Sources */,
+				BE8202212277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

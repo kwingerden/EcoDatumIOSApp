@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class CarbonSinkTableCellView: UITableViewCell {
+class CarbonSinkCellView: UICollectionViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var thumbnailImageView: UIImageView!
  
     override func layoutSubviews() {
         super.layoutSubviews()
-        thumbnailImageView.layer.borderWidth = 1
-        thumbnailImageView.layer.borderColor = EDRichBlack.cgColor
         thumbnailImageView.layer.cornerRadius = 15
     }
 }

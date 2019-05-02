@@ -14,13 +14,19 @@ import EcoDatumService
 import Foundation
 import UIKit
 
-class CarbonSinkMainViewController: UITableViewController, CoreDataContextHolder {
+class CarbonSinkMainViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     
     var context: NSManagedObjectContext!
+    
+    @IBOutlet weak var uploadButton: UIBarButtonItem!
+    
+    @IBOutlet weak var scanCodeButton: UIBarButtonItem!
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
     private var sites: [SiteEntity] = []
+    
+    private var selectedSite: SiteEntity!
     
     private let NOTEBOOK_NAME = "ERHS Carbon Sink - 2019"
     
@@ -62,38 +68,55 @@ class CarbonSinkMainViewController: UITableViewController, CoreDataContextHolder
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? CarbonSinkScanCodeViewController {
+            vc.sites = sites
+        } else if let vc = segue.destination as? CarbonSinkDetailTabBarController {
+            vc.site = selectedSite
+        } else {
+            log.error("Unknown segue \(segue)")
+        }
+    }
+    
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
-        if sender == doneButton {
+        if sender == uploadButton {
+
+        } else if sender == scanCodeButton {
+            performSegue(withIdentifier: "scanCode", sender: nil)
+        } else if sender == doneButton {
             dismiss(animated: true, completion: nil)
         } else {
             log.error("Unknown button \(sender)")
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sites.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! CarbonSinkTableCellView
-        cell.thumbnailImageView.image = UIImage(named: "tree_\(indexPath.row + 1)_tree")
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 250, height: 369)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let treeNumber = indexPath.row + 1
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CarbonSinkCellView
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 15
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = EDRichBlack.cgColor
+        cell.thumbnailImageView.image = UIImage(named: "tree_\(treeNumber)_tree")
+        cell.titleLabel.text = "Tree \(treeNumber)"
         return cell
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIDevice.current.orientation.isLandscape {
-            print("Landscape")
-        } else {
-            print("Portrait")
-        }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedSite = sites[indexPath.row]
+        performSegue(withIdentifier: "detailView", sender: nil)
     }
     
 }

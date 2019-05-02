@@ -1,8 +1,8 @@
 //
-//  CarbonSinkDetailViewController.swift
+//  CarbonSinkMapNavigationController.swift
 //  EcoDatumIOSApp
 //
-//  Created by Kenneth Wingerden on 4/29/19.
+//  Created by Kenneth Wingerden on 5/2/19.
 //  Copyright © 2019 Kenneth Wingerden. All rights reserved.
 //
 
@@ -12,21 +12,21 @@ import EcoDatumService
 import Foundation
 import UIKit
 
-class CarbonSinkDetailTabBarController: UITabBarController, CoreDataContextHolder, SiteEntityHolder {
+class CarbonSinkMapNavigationController: UINavigationController, CoreDataContextHolder, SiteEntityHolder  {
     
     var context: NSManagedObjectContext!
     
     var site: SiteEntity!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "\(site.name!) - Photos"
-        viewControllers?.forEach { vc in
+        
+        for vc in viewControllers {
             if var holder = vc as? CoreDataContextHolder {
-                holder.context = self.context
+                holder.context = context
             }
             if var holder = vc as? SiteEntityHolder {
-                holder.site = self.site
+                holder.site = site
             }
         }
     }

@@ -6,14 +6,18 @@
 //  Copyright © 2019 Kenneth Wingerden. All rights reserved.
 //
 
+import CoreData
 import EcoDatumCoreData
-import EcoDatumModel
+import EcoDatumService
 import AVFoundation
 import UIKit
 
-class CarbonSinkScanCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class CarbonSinkScanCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate,
+CoreDataContextHolder, SiteEntitiesHolder {
     
-    var sites: [SiteEntity] = []
+    var context: NSManagedObjectContext!
+    
+    var sites: [SiteEntity]!
     
     private var captureSession: AVCaptureSession!
     
@@ -59,10 +63,11 @@ class CarbonSinkScanCodeViewController: UIViewController, AVCaptureMetadataOutpu
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? CarbonSinkDetailTabBarController {
+        if var vc = segue.destination as? CoreDataContextHolder {
+            vc.context = context
+        }
+        if var vc = segue.destination as? SiteEntityHolder {
             vc.site = selectedSite
-        } else {
-            log.error("Unknown segue \(segue)")
         }
     }
     

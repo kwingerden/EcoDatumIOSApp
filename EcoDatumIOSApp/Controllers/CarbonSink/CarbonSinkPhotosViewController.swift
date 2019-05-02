@@ -6,17 +6,22 @@
 //  Copyright © 2019 Kenneth Wingerden. All rights reserved.
 //
 
+import CoreData
 import EcoDatumCoreData
-import EcoDatumModel
+import EcoDatumService
 import Foundation
 import UIKit
 
-class CarbonSinkPhotoViewController: UIViewController, SiteEntityHolder {
+class CarbonSinkPhotosViewController: UIViewController, CoreDataContextHolder, SiteEntityHolder {
+    
+    var context: NSManagedObjectContext!
     
     var site: SiteEntity!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "\(site.name!) - Photos"
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  SiteEntityHolder.swift
+//  SiteEntitiesHolder.swift
 //  EcoDatumIOSApp
 //
 //  Created by Kenneth Wingerden on 5/2/19.
@@ -11,8 +11,8 @@ import EcoDatumCoreData
 import EcoDatumService
 import Foundation
 
-protocol SiteEntityHolder {
+protocol SiteEntitiesHolder {
     
-    var site: SiteEntity! { set get }
+    var sites: [SiteEntity]! { set get }
     
 }

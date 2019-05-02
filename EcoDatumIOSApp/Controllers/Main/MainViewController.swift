@@ -50,7 +50,7 @@ class MainViewController: UIViewController, CoreDataContextHolder {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? CarbonSinkNavigationController {
+        if var vc = segue.destination as? CoreDataContextHolder {
             vc.context = context
         } else {
             log.error("Unknown segue \(segue)")

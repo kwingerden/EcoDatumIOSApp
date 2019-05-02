@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE023340227A9060006F3E7E /* CarbonSinkPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02333F227A9060006F3E7E /* CarbonSinkPhotoViewController.swift */; };
+		BE023340227A9060006F3E7E /* CarbonSinkPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02333F227A9060006F3E7E /* CarbonSinkPhotosViewController.swift */; };
 		BE023342227A9076006F3E7E /* CarbonSinkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023341227A9076006F3E7E /* CarbonSinkMapViewController.swift */; };
 		BE023344227A9091006F3E7E /* CarbonSinkDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023343227A9091006F3E7E /* CarbonSinkDataViewController.swift */; };
-		BE023346227A9D37006F3E7E /* SiteEntityHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023345227A9D37006F3E7E /* SiteEntityHolder.swift */; };
+		BE02334E227B714E006F3E7E /* SiteEntityHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02334D227B714E006F3E7E /* SiteEntityHolder.swift */; };
+		BE023350227B719F006F3E7E /* SiteEntitiesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02334F227B719F006F3E7E /* SiteEntitiesHolder.swift */; };
+		BE023352227B720E006F3E7E /* NotebookEntityHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023351227B720E006F3E7E /* NotebookEntityHolder.swift */; };
+		BE023354227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023353227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift */; };
+		BE023356227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023355227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift */; };
+		BE023358227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023357227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift */; };
 		BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */; };
 		BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FD92236F8C800CBE228 /* Notebook.storyboard */; };
 		BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */; };
@@ -186,10 +191,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BE02333F227A9060006F3E7E /* CarbonSinkPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkPhotoViewController.swift; sourceTree = "<group>"; };
+		BE02333F227A9060006F3E7E /* CarbonSinkPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkPhotosViewController.swift; sourceTree = "<group>"; };
 		BE023341227A9076006F3E7E /* CarbonSinkMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkMapViewController.swift; sourceTree = "<group>"; };
 		BE023343227A9091006F3E7E /* CarbonSinkDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDataViewController.swift; sourceTree = "<group>"; };
-		BE023345227A9D37006F3E7E /* SiteEntityHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteEntityHolder.swift; sourceTree = "<group>"; };
+		BE02334D227B714E006F3E7E /* SiteEntityHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteEntityHolder.swift; sourceTree = "<group>"; };
+		BE02334F227B719F006F3E7E /* SiteEntitiesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteEntitiesHolder.swift; sourceTree = "<group>"; };
+		BE023351227B720E006F3E7E /* NotebookEntityHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookEntityHolder.swift; sourceTree = "<group>"; };
+		BE023353227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDataNavigationController.swift; sourceTree = "<group>"; };
+		BE023355227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkMapNavigationController.swift; sourceTree = "<group>"; };
+		BE023357227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkPhotosNavigationController.swift; sourceTree = "<group>"; };
 		BE2D2FD22236F8C800CBE228 /* EcoDatumIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoDatumIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2D2FDA2236F8C800CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notebook.storyboard; sourceTree = "<group>"; };
@@ -311,7 +321,9 @@
 				BE2D2FE12236F8C900CBE228 /* Info.plist */,
 				BEB892F9224C186D0094A21E /* CoreDataContextHolder.swift */,
 				BEB89301224D5A230094A21E /* Notifications.swift */,
-				BE023345227A9D37006F3E7E /* SiteEntityHolder.swift */,
+				BE02334D227B714E006F3E7E /* SiteEntityHolder.swift */,
+				BE02334F227B719F006F3E7E /* SiteEntitiesHolder.swift */,
+				BE023351227B720E006F3E7E /* NotebookEntityHolder.swift */,
 			);
 			path = EcoDatumIOSApp;
 			sourceTree = "<group>";
@@ -509,9 +521,12 @@
 				BEB18A132273A4020019146C /* CarbonSinkNavigationController.swift */,
 				BE82021E2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift */,
 				BE8202202277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift */,
-				BE02333F227A9060006F3E7E /* CarbonSinkPhotoViewController.swift */,
+				BE02333F227A9060006F3E7E /* CarbonSinkPhotosViewController.swift */,
 				BE023341227A9076006F3E7E /* CarbonSinkMapViewController.swift */,
 				BE023343227A9091006F3E7E /* CarbonSinkDataViewController.swift */,
+				BE023353227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift */,
+				BE023355227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift */,
+				BE023357227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift */,
 			);
 			path = CarbonSink;
 			sourceTree = "<group>";
@@ -831,6 +846,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */,
+				BE023354227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift in Sources */,
+				BE023352227B720E006F3E7E /* NotebookEntityHolder.swift in Sources */,
 				BEB18A142273A4020019146C /* CarbonSinkNavigationController.swift in Sources */,
 				BECE1FA622512AC2009CE092 /* TestNotebookNavigationController.swift in Sources */,
 				BECE1FAB2251376E009CE092 /* TestNotebookFooterView.swift in Sources */,
@@ -843,6 +860,8 @@
 				BE023342227A9076006F3E7E /* CarbonSinkMapViewController.swift in Sources */,
 				BEB18A1B2273F4B00019146C /* CarbonSinkImageView.swift in Sources */,
 				BEB18A28227659060019146C /* MainNavigationController.swift in Sources */,
+				BE023356227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift in Sources */,
+				BE023358227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift in Sources */,
 				BEB892FA224C186D0094A21E /* CoreDataContextHolder.swift in Sources */,
 				BE023344227A9091006F3E7E /* CarbonSinkDataViewController.swift in Sources */,
 				BEB18A10227295590019146C /* CarbonSinkMainViewController.swift in Sources */,
@@ -857,10 +876,11 @@
 				BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */,
 				BEB18A12227295B30019146C /* CarbonSinkCellView.swift in Sources */,
 				BEB89309224EA8510094A21E /* SiteMasterNavigationController.swift in Sources */,
-				BE023346227A9D37006F3E7E /* SiteEntityHolder.swift in Sources */,
-				BE023340227A9060006F3E7E /* CarbonSinkPhotoViewController.swift in Sources */,
+				BE023350227B719F006F3E7E /* SiteEntitiesHolder.swift in Sources */,
+				BE023340227A9060006F3E7E /* CarbonSinkPhotosViewController.swift in Sources */,
 				BEB18A232273F61B0019146C /* CarbonSinkTableCellModel.swift in Sources */,
 				BE8202212277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift in Sources */,
+				BE02334E227B714E006F3E7E /* SiteEntityHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

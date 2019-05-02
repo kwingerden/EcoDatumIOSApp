@@ -9,12 +9,12 @@
 import CoreData
 import CoreLocation
 import EcoDatumCoreData
-import EcoDatumModel
 import EcoDatumService
 import Foundation
 import UIKit
 
-class CarbonSinkMainViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
+class CarbonSinkMainViewController: UICollectionViewController,
+UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     
     var context: NSManagedObjectContext!
     
@@ -23,6 +23,8 @@ class CarbonSinkMainViewController: UICollectionViewController, UICollectionView
     @IBOutlet weak var scanCodeButton: UIBarButtonItem!
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    
+    private var notebook: NotebookEntity!
     
     private var sites: [SiteEntity] = []
     
@@ -33,7 +35,6 @@ class CarbonSinkMainViewController: UICollectionViewController, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var notebook: NotebookEntity?
         do {
             notebook = try NotebookEntity.new(context, name: NOTEBOOK_NAME)
             try notebook?.save()
@@ -69,12 +70,17 @@ class CarbonSinkMainViewController: UICollectionViewController, UICollectionView
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? CarbonSinkScanCodeViewController {
-            vc.sites = sites
-        } else if let vc = segue.destination as? CarbonSinkDetailTabBarController {
+        if var vc = segue.destination as? CoreDataContextHolder {
+            vc.context = context
+        }
+        if var vc = segue.destination as? NotebookEntityHolder {
+            vc.notebook = notebook
+        }
+        if var vc = segue.destination as? SiteEntityHolder {
             vc.site = selectedSite
-        } else {
-            log.error("Unknown segue \(segue)")
+        }
+        if var vc = segue.destination as? SiteEntitiesHolder {
+            vc.sites = sites
         }
     }
     

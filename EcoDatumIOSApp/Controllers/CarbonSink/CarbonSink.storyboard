@@ -273,21 +273,15 @@
             </objects>
             <point key="canvasLocation" x="4942.1875" y="352.734375"/>
         </scene>
-        <!--Tree Photo-->
-        <scene sceneID="KTo-pr-OTm">
+        <!--Carbon Sink Photos View Controller-->
+        <scene sceneID="WZt-Yo-2ZZ">
             <objects>
-                <viewController title="Tree Photo" id="wja-eZ-m9Z" customClass="CarbonSinkPhotosViewController" customModule="EcoDatumIOSApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fwJ-Yl-1wB">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="EDCerulean"/>
-                        <viewLayoutGuide key="safeArea" id="chj-VM-0py"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Tree Photo" id="yue-RM-vPc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="34i-nP-ja5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="UXB-iC-pjl" customClass="CarbonSinkPhotosViewController" customModule="EcoDatumIOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BUs-a4-jId"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ax-tO-NrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4110.15625" y="-318.1640625"/>
+            <point key="canvasLocation" x="4207" y="-318"/>
         </scene>
         <!--Carbon Sink Detail Tab Bar Controller-->
         <scene sceneID="8fe-6a-HT6">
@@ -405,7 +399,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="wja-eZ-m9Z" kind="relationship" relationship="rootViewController" id="yyX-bA-Hti"/>
+                        <segue destination="UXB-iC-pjl" kind="relationship" relationship="rootViewController" id="GgA-BC-6lt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZg-fg-rEb" userLabel="First Responder" sceneMemberID="firstResponder"/>

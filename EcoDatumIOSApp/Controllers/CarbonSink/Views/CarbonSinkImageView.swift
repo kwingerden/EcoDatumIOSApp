@@ -11,14 +11,23 @@ import UIKit
 
 class CarbonSinkImageView: UIView {
     
+    @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     override func layoutSubviews() {
-        frame = superview!.bounds
+        frame = superview!.frame
+        imageWidthConstraint.constant = min(frame.width - 20, frame.height * 0.7)
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 15
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = EDRichBlack.cgColor
     }
     
 }

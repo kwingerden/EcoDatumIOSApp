@@ -20,6 +20,8 @@ UIPageViewControllerDataSource {
     
     var site: SiteEntity!
     
+    @IBOutlet weak var doneButtonItem: UIBarButtonItem!
+    
     private var _viewControllers: [UIViewController] = []
     
     override func viewDidLoad() {
@@ -63,6 +65,11 @@ UIPageViewControllerDataSource {
             animated: true,
             completion: nil)
         _viewControllers = [vc1, vc2, vc3]
+    }
+    @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
+        if sender == doneButtonItem {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

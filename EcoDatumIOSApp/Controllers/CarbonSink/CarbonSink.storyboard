@@ -205,7 +205,7 @@
                             <outlet property="delegate" destination="YJq-a0-zYw" id="Atu-UM-dHM"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Carbon Sink - ERHS" prompt="EcoDatum" id="Cfq-2R-PPX">
+                    <navigationItem key="navigationItem" title="Carbon Sink - ERHS" id="Cfq-2R-PPX">
                         <leftBarButtonItems>
                             <barButtonItem image="ios-upload-line" id="gIH-Y6-ZXF">
                                 <color key="tintColor" name="EDPlatinum"/>
@@ -264,20 +264,55 @@
                     <view key="view" contentMode="scaleToFill" id="AgU-fr-fd0">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rV7-HV-lsc">
+                                <rect key="frame" x="134" y="132" width="500" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rV7-HV-lsc" secondAttribute="height" multiplier="1:1" id="D3o-gc-uMD"/>
+                                    <constraint firstAttribute="width" constant="500" id="ZC0-zn-Tsq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" name="EDCerulean"/>
+                        <constraints>
+                            <constraint firstItem="rV7-HV-lsc" firstAttribute="top" secondItem="Kh1-pZ-neM" secondAttribute="top" constant="10" id="ZTJ-ef-ehZ"/>
+                            <constraint firstItem="rV7-HV-lsc" firstAttribute="centerX" secondItem="AgU-fr-fd0" secondAttribute="centerX" id="Zzr-KN-SoK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kh1-pZ-neM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tree Map" id="UlD-N9-yIh"/>
+                    <navigationItem key="navigationItem" title="Tree Map" id="UlD-N9-yIh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TRX-lr-9cP">
+                            <color key="tintColor" name="EDPlatinum"/>
+                            <connections>
+                                <action selector="buttonPressed:" destination="C18-3R-zln" id="y7x-uI-Ooy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButtonItem" destination="TRX-lr-9cP" id="Dbk-fc-ovF"/>
+                        <outlet property="imageView" destination="rV7-HV-lsc" id="5PS-6V-ORv"/>
+                        <outlet property="imageWidthConstraint" destination="ZC0-zn-Tsq" id="qh6-id-Wp8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdw-sR-FWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4942.1875" y="352.734375"/>
         </scene>
-        <!--Carbon Sink Photos View Controller-->
+        <!--Title-->
         <scene sceneID="WZt-Yo-2ZZ">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="UXB-iC-pjl" customClass="CarbonSinkPhotosViewController" customModule="EcoDatumIOSApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="BUs-a4-jId"/>
+                    <navigationItem key="navigationItem" title="Title" id="mec-9U-XTr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="EqI-Gh-IUa">
+                            <color key="tintColor" name="EDPlatinum"/>
+                            <connections>
+                                <action selector="buttonPressed:" destination="UXB-iC-pjl" id="KOQ-cl-C8H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButtonItem" destination="EqI-Gh-IUa" id="kR0-75-KhU"/>
+                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ax-tO-NrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,12 +346,124 @@
                     <view key="view" contentMode="scaleToFill" id="fdq-JJ-S5q">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZr-6w-3xA">
+                                <rect key="frame" x="160" y="377" width="448" height="270"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6uF-tL-BwX">
+                                        <rect key="frame" x="20" y="59" width="408" height="152"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AUH-NR-Fdj">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="152"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJO-QM-sOQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <color key="textColor" name="EDPlatinum"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Circumference:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-tX-YfU">
+                                                        <rect key="frame" x="0.0" y="54" width="171.5" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <color key="textColor" name="EDPlatinum"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbon:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ole-2P-ny5">
+                                                        <rect key="frame" x="0.0" y="108" width="90" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <color key="textColor" name="EDPlatinum"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OVP-Mx-nn7">
+                                                <rect key="frame" x="200" y="0.0" width="150" height="152"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sAa-fv-ggT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                                        <color key="backgroundColor" name="EDPlatinum"/>
+                                                        <color key="tintColor" name="EDCalPolyGreen"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="g5c-lI-kqB"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="EDCalPolyGreen"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-fg-GD6">
+                                                        <rect key="frame" x="0.0" y="54" width="150" height="44"/>
+                                                        <color key="backgroundColor" name="EDPlatinum"/>
+                                                        <color key="textColor" name="EDCalPolyGreen"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1Q-dv-l5c">
+                                                        <rect key="frame" x="0.0" y="108" width="150" height="44"/>
+                                                        <color key="backgroundColor" name="EDAsparagus"/>
+                                                        <color key="textColor" name="EDCalPolyGreen"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iwd-VC-Ngr">
+                                                <rect key="frame" x="360" y="0.0" width="48" height="152"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6V-Eg-e7q">
+                                                        <rect key="frame" x="0.0" y="0.0" width="21.5" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <color key="textColor" name="EDCalPolyGreen"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-1b-Nyl">
+                                                        <rect key="frame" x="0.0" y="54" width="21.5" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <color key="textColor" name="EDCalPolyGreen"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beG-R1-g5L">
+                                                        <rect key="frame" x="0.0" y="108" width="27" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <color key="textColor" name="EDCalPolyGreen"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="EDAsparagus"/>
+                                <constraints>
+                                    <constraint firstItem="6uF-tL-BwX" firstAttribute="leading" secondItem="QZr-6w-3xA" secondAttribute="leading" constant="20" id="dlU-zS-sLH"/>
+                                    <constraint firstAttribute="trailing" secondItem="6uF-tL-BwX" secondAttribute="trailing" constant="20" id="g3l-nO-4Au"/>
+                                    <constraint firstItem="6uF-tL-BwX" firstAttribute="centerY" secondItem="QZr-6w-3xA" secondAttribute="centerY" id="vLt-qQ-Oca"/>
+                                    <constraint firstAttribute="height" constant="270" id="w0L-jJ-NlZ"/>
+                                    <constraint firstAttribute="width" constant="448" id="yPF-4f-pVg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" name="EDCerulean"/>
+                        <constraints>
+                            <constraint firstItem="QZr-6w-3xA" firstAttribute="centerX" secondItem="fdq-JJ-S5q" secondAttribute="centerX" id="g4c-Zf-Ftw"/>
+                            <constraint firstItem="QZr-6w-3xA" firstAttribute="centerY" secondItem="fdq-JJ-S5q" secondAttribute="centerY" id="xIf-lZ-qJs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="k8B-gK-tk4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tree Data" prompt="Press Save when done." id="5A5-K9-UVA">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="otK-7f-oT8"/>
+                    <navigationItem key="navigationItem" title="Tree Data" id="5A5-K9-UVA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="otK-7f-oT8">
+                            <color key="tintColor" name="EDPlatinum"/>
+                            <connections>
+                                <action selector="buttonPressed:" destination="Hce-Bz-GW2" id="YYA-HB-3zn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="carbonTextField" destination="o1Q-dv-l5c" id="yLq-jv-Tn6"/>
+                        <outlet property="circumferenceTextField" destination="JTO-fg-GD6" id="LhD-OZ-gHT"/>
+                        <outlet property="dataView" destination="QZr-6w-3xA" id="nyh-b9-5o9"/>
+                        <outlet property="doneButtonItem" destination="otK-7f-oT8" id="S1Y-vV-Wsp"/>
+                        <outlet property="heightTextField" destination="sAa-fv-ggT" id="0IH-Mo-fAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9o-zZ-yJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

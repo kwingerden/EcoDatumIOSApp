@@ -33,6 +33,7 @@
 		BE2D305822385A5700CBE228 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D305722385A5700CBE228 /* ColorPalette.swift */; };
 		BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305A22385CC000CBE228 /* ColorPalette.pdf */; };
 		BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */; };
+		BE3C6DE5227D45A500626E9E /* CarbonSinkDataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C6DE4227D45A500626E9E /* CarbonSinkDataValue.swift */; };
 		BE471A17224B1D6700E041B8 /* NotebookSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE471A16224B1D6700E041B8 /* NotebookSplitViewController.swift */; };
 		BE471A26224B25A400E041B8 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE471A25224B25A400E041B8 /* SwiftyBeaver.framework */; };
 		BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE471A28224B26E600E041B8 /* NotebookMasterController.swift */; };
@@ -220,6 +221,7 @@
 		BE2D305722385A5700CBE228 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		BE2D305A22385CC000CBE228 /* ColorPalette.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ColorPalette.pdf; sourceTree = "<group>"; };
 		BE2D305D22386ED100CBE228 /* TestSplitView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSplitView.storyboard; sourceTree = "<group>"; };
+		BE3C6DE4227D45A500626E9E /* CarbonSinkDataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDataValue.swift; sourceTree = "<group>"; };
 		BE471A16224B1D6700E041B8 /* NotebookSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookSplitViewController.swift; sourceTree = "<group>"; };
 		BE471A25224B25A400E041B8 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		BE471A28224B26E600E041B8 /* NotebookMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookMasterController.swift; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 				BE023353227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift */,
 				BE023355227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift */,
 				BE023357227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift */,
+				BE3C6DE4227D45A500626E9E /* CarbonSinkDataValue.swift */,
 			);
 			path = CarbonSink;
 			sourceTree = "<group>";
@@ -845,6 +848,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3C6DE5227D45A500626E9E /* CarbonSinkDataValue.swift in Sources */,
 				BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */,
 				BE023354227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift in Sources */,
 				BE023352227B720E006F3E7E /* NotebookEntityHolder.swift in Sources */,

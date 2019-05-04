@@ -8,6 +8,7 @@
 
 import CoreData
 import EcoDatumCoreData
+import EcoDatumModel
 import EcoDatumService
 import Foundation
 import UIKit
@@ -33,16 +34,52 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
         let nf = NumberFormatter()
         nf.generatesDecimalNumbers = true
         nf.maximumIntegerDigits = 6
+        nf.maximumFractionDigits = 6
+        return nf
+    }()
+    
+    private let carbonFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.generatesDecimalNumbers = true
+        nf.maximumIntegerDigits = 6
         nf.maximumFractionDigits = 2
         return nf
     }()
     
     private let allowableCharacterSet = CharacterSet(charactersIn: ".0123456789")
     
+    private var ecoDatum: EcoDatumEntity?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "\(site.name!) - Data"
+        
+        do {
+            let ecoData = try site.ecoData()
+            if ecoData.count == 1 {
+                let ecoDatum = ecoData[0]
+                guard let primaryType = ecoDatum.primaryType,
+                    primaryType == PrimaryType.Biotic.rawValue,
+                    let secondaryType = ecoDatum.secondaryType,
+                    secondaryType == SecondaryType.OrganicCarbon.rawValue,
+                    let dataType = ecoDatum.dataType,
+                    dataType == DataType.Carbon.rawValue,
+                    let dataUnit = ecoDatum.dataUnit,
+                    dataUnit == DataUnit.KilogramsOfCarbon.rawValue,
+                    let data = ecoDatum.dataValue else {
+                        log.error("Unexpected EcoDatum \(ecoDatum))")
+                        return
+                }
+                let dataValue = try JSONDecoder().decode(CarbonSinkDataValue.self, from: data)
+                heightTextField.text = numberFormatter.string(from: NSDecimalNumber(decimal: dataValue.heightInMeters))
+                circumferenceTextField.text = numberFormatter.string(from: NSDecimalNumber(decimal: dataValue.circumferenceInMeters))
+                carbonTextField.text = carbonFormatter.string(from: NSDecimalNumber(decimal: dataValue.carbonInKilograms))
+                self.ecoDatum = ecoDatum
+            }
+        } catch let error as NSError {
+            log.error("Failed to get EcoDatum for Site \(site.name!): \(error)")
+        }
         
         dataView.layer.masksToBounds = true
         dataView.layer.cornerRadius = 15
@@ -88,7 +125,15 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
     
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
         if sender == doneButtonItem {
-            dismiss(animated: true, completion: nil)
+            if let carbonTextValue = carbonTextField.text,
+                !carbonTextValue.isEmpty {
+                newOrUpdateEcoDatum()
+                heightTextField.resignFirstResponder()
+                circumferenceTextField.resignFirstResponder()
+                dismiss(animated: true, completion: nil)
+            } else {
+                displayAlert()
+            }
         }
     }
     
@@ -96,8 +141,14 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
         if textField == heightTextField {
             circumferenceTextField.becomeFirstResponder()
         } else if textField == circumferenceTextField {
-            circumferenceTextField.resignFirstResponder()
-            dismiss(animated: true, completion: nil)
+            if let carbonTextValue = carbonTextField.text,
+                !carbonTextValue.isEmpty {
+                newOrUpdateEcoDatum()
+                circumferenceTextField.resignFirstResponder()
+                dismiss(animated: true, completion: nil)
+            } else {
+                displayAlert()
+            }
         }
         return true
     }
@@ -179,6 +230,88 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
         
         carbonTextField.layer.borderWidth = 1
         carbonTextField.layer.borderColor = UIColor.green.cgColor
-        carbonTextField.text = numberFormatter.string(from: NSDecimalNumber(decimal: massOfCarbonKilograms))
+        carbonTextField.text = carbonFormatter.string(from: NSDecimalNumber(decimal: massOfCarbonKilograms))
     }
+    
+    private func displayAlert() {
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.dismiss(animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let alertController = UIAlertController(
+            title: "Data Error",
+            message: "Unable to calculate kilograms of carbon. Press OK to continue with out saving data. Press Cancel to continue entering data.",
+            preferredStyle: .alert)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func newOrUpdateEcoDatum() {
+        ecoDatum == nil ? newEcoDatum() : updateEcoDatum()
+    }
+    
+    private func newEcoDatum() {
+        guard ecoDatum == nil else {
+            log.error("EcoDatum already exists for new EcoDatum")
+            return
+        }
+        
+        guard let heightText = heightTextField.text,
+            let heightDecimal = numberFormatter.number(from: heightText),
+            let circumferenceText = circumferenceTextField.text,
+            let circumferenceDecimal = numberFormatter.number(from: circumferenceText),
+            let carbonText = carbonTextField.text,
+            let carbonDecimal = carbonFormatter.number(from: carbonText) else {
+                log.error("Failed to extract data from text fields")
+                return
+        }
+    
+        do {
+            let dataValue = CarbonSinkDataValue(
+                heightInMeters: heightDecimal.decimalValue,
+                circumferenceInMeters: circumferenceDecimal.decimalValue,
+                carbonInKilograms: carbonDecimal.decimalValue)
+            ecoDatum = try site.newEcoDatum(
+                context,
+                collectionDate: Date(),
+                primaryType: PrimaryType.Biotic.rawValue,
+                secondaryType: SecondaryType.OrganicCarbon.rawValue,
+                dataType: DataType.Carbon.rawValue,
+                dataUnit: DataUnit.KilogramsOfCarbon.rawValue,
+                dataValue: try JSONEncoder().encode(dataValue))
+            try context.save()
+        } catch let error as NSError {
+            log.error("Failed to create new EcoDatum for Site \(site.name!): \(error)")
+        }
+    }
+    
+    private func updateEcoDatum() {
+        guard let ecoDatum = ecoDatum else {
+            log.error("EcoDatum value not set for update")
+            return
+        }
+        
+        guard let heightText = heightTextField.text,
+            let heightDecimal = numberFormatter.number(from: heightText),
+            let circumferenceText = circumferenceTextField.text,
+            let circumferenceDecimal = numberFormatter.number(from: circumferenceText),
+            let carbonText = carbonTextField.text,
+            let carbonDecimal = carbonFormatter.number(from: carbonText) else {
+                log.error("Failed to extract data from text fields")
+                return
+        }
+        
+        do {
+            let dataValue = CarbonSinkDataValue(
+                heightInMeters: heightDecimal.decimalValue,
+                circumferenceInMeters: circumferenceDecimal.decimalValue,
+                carbonInKilograms: carbonDecimal.decimalValue)
+            ecoDatum.dataValue = try JSONEncoder().encode(dataValue)
+            try context.save()
+        } catch let error as NSError {
+            log.error("Failed to delete EcoDatum for Site \(site.name!): \(error)")
+        }
+    }
+    
 }

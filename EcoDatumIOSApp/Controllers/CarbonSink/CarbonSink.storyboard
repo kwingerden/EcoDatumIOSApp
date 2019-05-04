@@ -219,6 +219,11 @@
                                     <action selector="buttonPressed:" destination="YJq-a0-zYw" id="ej5-Ik-7kC"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem systemItem="trash" id="hD1-Lm-Q1v">
+                                <connections>
+                                    <action selector="buttonPressed:" destination="YJq-a0-zYw" id="Nl6-cM-KgN"/>
+                                </connections>
+                            </barButtonItem>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="OSA-CS-wlf">
                             <color key="tintColor" name="EDPlatinum"/>
@@ -228,11 +233,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButton" destination="hD1-Lm-Q1v" id="WoA-TU-2aV"/>
                         <outlet property="doneButton" destination="OSA-CS-wlf" id="RFo-vG-fcz"/>
                         <outlet property="scanCodeButton" destination="Ay0-tE-sQ1" id="OpM-ra-0Ym"/>
                         <outlet property="uploadButton" destination="gIH-Y6-ZXF" id="H4Y-o7-dKD"/>
                         <segue destination="f47-ni-jfQ" kind="show" identifier="scanCode" id="9VQ-Eq-8jz"/>
-                        <segue destination="AaN-Km-PwU" kind="presentation" identifier="detailView" id="oUv-vb-6Nu"/>
+                        <segue destination="AaN-Km-PwU" kind="presentation" identifier="detailView" modalTransitionStyle="flipHorizontal" id="oUv-vb-6Nu"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bct-og-How" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,6 +22,8 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     
     @IBOutlet weak var scanCodeButton: UIBarButtonItem!
     
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
+    
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
     private var notebook: NotebookEntity!
@@ -89,6 +91,8 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
 
         } else if sender == scanCodeButton {
             performSegue(withIdentifier: "scanCode", sender: nil)
+        } else if sender == deleteButton {
+            deleteData()
         } else if sender == doneButton {
             dismiss(animated: true, completion: nil)
         } else {
@@ -123,6 +127,17 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedSite = sites[indexPath.row]
         performSegue(withIdentifier: "detailView", sender: nil)
+    }
+    
+    private func deleteData() {
+        do {
+            for site in sites {
+                try site.deleteAllEcoData()
+            }
+            try context.save()
+        } catch let error as NSError {
+            log.error("Failed to all site data: \(error)")
+        }
     }
     
 }

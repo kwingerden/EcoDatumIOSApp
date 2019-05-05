@@ -36,7 +36,6 @@
 		BE3C6DE5227D45A500626E9E /* CarbonSinkDataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C6DE4227D45A500626E9E /* CarbonSinkDataValue.swift */; };
 		BE3C6DEB227E883B00626E9E /* CarbonSinkTrees.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3C6DEA227E883B00626E9E /* CarbonSinkTrees.xcassets */; };
 		BE3C6DED227E8C6600626E9E /* CarbonSinkMaps.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3C6DEC227E8C6600626E9E /* CarbonSinkMaps.xcassets */; };
-		BE3C6DF0227F81FF00626E9E /* CarbonSinkCodes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3C6DEF227F81FF00626E9E /* CarbonSinkCodes.xcassets */; };
 		BE471A17224B1D6700E041B8 /* NotebookSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE471A16224B1D6700E041B8 /* NotebookSplitViewController.swift */; };
 		BE471A26224B25A400E041B8 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE471A25224B25A400E041B8 /* SwiftyBeaver.framework */; };
 		BE471A29224B26E600E041B8 /* NotebookMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE471A28224B26E600E041B8 /* NotebookMasterController.swift */; };
@@ -227,7 +226,6 @@
 		BE3C6DE4227D45A500626E9E /* CarbonSinkDataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDataValue.swift; sourceTree = "<group>"; };
 		BE3C6DEA227E883B00626E9E /* CarbonSinkTrees.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CarbonSinkTrees.xcassets; sourceTree = "<group>"; };
 		BE3C6DEC227E8C6600626E9E /* CarbonSinkMaps.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CarbonSinkMaps.xcassets; sourceTree = "<group>"; };
-		BE3C6DEF227F81FF00626E9E /* CarbonSinkCodes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CarbonSinkCodes.xcassets; sourceTree = "<group>"; };
 		BE471A16224B1D6700E041B8 /* NotebookSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookSplitViewController.swift; sourceTree = "<group>"; };
 		BE471A25224B25A400E041B8 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		BE471A28224B26E600E041B8 /* NotebookMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookMasterController.swift; sourceTree = "<group>"; };
@@ -506,7 +504,6 @@
 			children = (
 				BE3C6DEC227E8C6600626E9E /* CarbonSinkMaps.xcassets */,
 				BE3C6DEA227E883B00626E9E /* CarbonSinkTrees.xcassets */,
-				BE3C6DEF227F81FF00626E9E /* CarbonSinkCodes.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -802,7 +799,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3C6DF0227F81FF00626E9E /* CarbonSinkCodes.xcassets in Resources */,
 				BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */,
 				BE2D305E22386ED100CBE228 /* TestSplitView.storyboard in Resources */,
 				BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */,

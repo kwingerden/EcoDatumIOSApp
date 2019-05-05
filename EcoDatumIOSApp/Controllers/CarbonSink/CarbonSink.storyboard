@@ -195,6 +195,9 @@
                                 </constraints>
                                 <size key="customSize" width="250" height="369"/>
                                 <connections>
+                                    <outlet property="carbonLabel" destination="u30-Vz-Mkb" id="xyB-VT-MMJ"/>
+                                    <outlet property="circumferenceLabel" destination="HQQ-te-Cpn" id="36g-nf-Jnd"/>
+                                    <outlet property="heightLabel" destination="Raz-OC-grZ" id="Isv-gM-4mQ"/>
                                     <outlet property="thumbnailImageView" destination="IrF-TI-323" id="Wyb-rS-xRE"/>
                                     <outlet property="titleLabel" destination="YVu-SN-B60" id="xKm-Zl-ood"/>
                                 </connections>

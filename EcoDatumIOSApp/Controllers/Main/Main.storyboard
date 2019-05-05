@@ -70,7 +70,7 @@
                         <outlet property="carbonSinkERHSButton" destination="6t3-tH-m53" id="g4E-8s-ZNH"/>
                         <outlet property="stackView" destination="wVd-z6-Fh1" id="pDC-x0-ybC"/>
                         <outlet property="stackViewWidthConstraint" destination="8aA-4r-XkF" id="nbs-zH-HTY"/>
-                        <segue destination="wbd-js-6jf" kind="presentation" identifier="CarbonSink" modalTransitionStyle="flipHorizontal" id="FQr-PZ-WwE"/>
+                        <segue destination="wbd-js-6jf" kind="presentation" identifier="CarbonSink" modalTransitionStyle="crossDissolve" id="FQr-PZ-WwE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFj-DQ-P28" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,7 +83,7 @@
                 <viewControllerPlaceholder storyboardName="CarbonSink" id="wbd-js-6jf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTr-Lp-HaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="62"/>
+            <point key="canvasLocation" x="214" y="134"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="8HD-63-Vgc">

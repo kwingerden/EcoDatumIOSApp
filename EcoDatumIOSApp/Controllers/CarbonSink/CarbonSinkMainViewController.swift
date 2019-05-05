@@ -9,6 +9,7 @@
 import CoreData
 import CoreLocation
 import EcoDatumCoreData
+import EcoDatumModel
 import EcoDatumService
 import Foundation
 import UIKit
@@ -34,6 +35,22 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     
     private let NOTEBOOK_NAME = "ERHS Carbon Sink - 2019"
     
+    private let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.generatesDecimalNumbers = true
+        nf.maximumIntegerDigits = 6
+        nf.maximumFractionDigits = 6
+        return nf
+    }()
+    
+    private let carbonFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.generatesDecimalNumbers = true
+        nf.maximumIntegerDigits = 6
+        nf.maximumFractionDigits = 2
+        return nf
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,7 +71,7 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
             return
         }
         
-        for index in 1...10 {
+        for index in 1...12 {
             do {
                 var site = try notebook?.findSite(by: "Tree \(index)")
                 if site == nil {
@@ -70,7 +87,12 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
             }
         }
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        collectionView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if var vc = segue.destination as? CoreDataContextHolder {
             vc.context = context
@@ -88,7 +110,7 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
         if sender == uploadButton {
-
+            
         } else if sender == scanCodeButton {
             performSegue(withIdentifier: "scanCode", sender: nil)
         } else if sender == deleteButton {
@@ -114,13 +136,43 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let treeNumber = indexPath.row + 1
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CarbonSinkCellView
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 15
         cell.layer.borderWidth = 1
         cell.layer.borderColor = EDRichBlack.cgColor
-        cell.thumbnailImageView.image = UIImage(named: "tree_\(treeNumber)_tree")
+        cell.thumbnailImageView.image = UIImage(named: "CarbonSinkTrees/\(treeNumber)/1")
         cell.titleLabel.text = "Tree \(treeNumber)"
+        
+        let site = sites[indexPath.row]
+        do {
+            let ecoData = try site.ecoData()
+            if ecoData.count == 1 {
+                let ecoDatum = ecoData[0]
+                if let primaryType = ecoDatum.primaryType,
+                    primaryType == PrimaryType.Biotic.rawValue,
+                    let secondaryType = ecoDatum.secondaryType,
+                    secondaryType == SecondaryType.OrganicCarbon.rawValue,
+                    let dataType = ecoDatum.dataType,
+                    dataType == DataType.Carbon.rawValue,
+                    let dataUnit = ecoDatum.dataUnit,
+                    dataUnit == DataUnit.KilogramsOfCarbon.rawValue,
+                    let data = ecoDatum.dataValue {
+                    let dataValue = try JSONDecoder().decode(CarbonSinkDataValue.self, from: data)
+                    cell.heightLabel.text = numberFormatter.string(from: NSDecimalNumber(decimal: dataValue.heightInMeters))
+                    cell.circumferenceLabel.text = numberFormatter.string(from: NSDecimalNumber(decimal: dataValue.circumferenceInMeters))
+                    cell.carbonLabel.text = carbonFormatter.string(from: NSDecimalNumber(decimal: dataValue.carbonInKilograms))
+                }
+            } else {
+                cell.heightLabel.text = "____"
+                cell.circumferenceLabel.text = "____"
+                cell.carbonLabel.text = "____"
+            }
+        } catch let error as NSError {
+            log.error("Failed to get EcoData for site \(site.name!): \(error)")
+        }
+        
         return cell
     }
     
@@ -130,14 +182,42 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     }
     
     private func deleteData() {
-        do {
-            for site in sites {
-                try site.deleteAllEcoData()
+        let okAction = UIAlertAction(title: "OK", style: .destructive) { _ in
+            DispatchQueue.main.async {
+                self.displaySecondDeleteDialog()
             }
-            try context.save()
-        } catch let error as NSError {
-            log.error("Failed to all site data: \(error)")
         }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let alertController = UIAlertController(
+            title: "Delete All Data?",
+            message: "Are you sure you want to delete all data?",
+            preferredStyle: .alert)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func displaySecondDeleteDialog() {
+        let deleteAllAction = UIAlertAction(title: "Delete All Data", style: .destructive) { _ in
+            do {
+                for site in self.sites {
+                    try site.deleteAllEcoData()
+                }
+                try self.context.save()
+            } catch let error as NSError {
+                log.error("Failed to all site data: \(error)")
+            }
+            self.collectionView.reloadData()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        let alertController = UIAlertController(
+            title: "Confirmation",
+            message: "Please confirm.",
+            preferredStyle: .actionSheet)
+        alertController.addAction(deleteAllAction)
+        alertController.addAction(cancelAction)
+        alertController.popoverPresentationController?.barButtonItem = deleteButton
+        present(alertController, animated: true, completion: nil)
     }
     
 }

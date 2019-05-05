@@ -28,8 +28,8 @@ class CarbonSinkMapViewController: UIViewController, CoreDataContextHolder, Site
         super.viewDidLoad()
         
         navigationItem.title = "\(site.name!) - Map"
-        let imageName = site.name!.lowercased().replacingOccurrences(of: " ", with: "_")
-        imageView.image = UIImage(named: "\(imageName)_map")
+        let imageName = site.name!.split(separator: " ")[1]
+        imageView.image = UIImage(named: "CarbonSinkMaps/\(imageName)")
     }
     
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {

@@ -39,32 +39,34 @@ UIPageViewControllerDataSource {
         
         let imageViewNib = UINib.init(nibName: "CarbonSinkImageView", bundle: nil)
         
+        let treeNumber = site.name!.split(separator: " ")[1]
+        
         let iv1 = imageViewNib.instantiate(withOwner: nil, options: nil)[0] as! CarbonSinkImageView
-        iv1.dateLabel.text = "2018-06-03"
-        iv1.imageView.image = UIImage(named: "tree_1_tree")
+        iv1.dateLabel.text = "2018-05-30"
+        iv1.imageView.image = UIImage(named: "CarbonSinkTrees/\(treeNumber)/1")
         let vc1 = UIViewController()
         vc1.view.addSubview(iv1)
         
-        let iv2 = imageViewNib.instantiate(withOwner: nil, options: nil)[0] as! CarbonSinkImageView
-        iv2.dateLabel.text = "2019-05-02"
-        iv2.imageView.image = UIImage(named: "tree_2_tree")
-        let vc2 = UIViewController()
-        vc2.view.addSubview(iv2)
+        _viewControllers = [vc1]
         
-        let iv3 = imageViewNib.instantiate(withOwner: nil, options: nil)[0] as! CarbonSinkImageView
-        iv3.dateLabel.text = "2019-05-02"
-        iv3.imageView.image = UIImage(named: "tree_3_tree")
-        let vc3 = UIViewController()
-        vc3.view.addSubview(iv3)
+        if treeNumber == "1" || treeNumber == "2" || treeNumber == "3" || treeNumber == "4" ||
+            treeNumber == "5" || treeNumber == "6" || treeNumber == "8" || treeNumber == "10" {
+            let iv2 = imageViewNib.instantiate(withOwner: nil, options: nil)[0] as! CarbonSinkImageView
+            iv2.dateLabel.text = "2019-05-04"
+            iv2.imageView.image = UIImage(named: "CarbonSinkTrees/\(treeNumber)/2")
+            let vc2 = UIViewController()
+            vc2.view.addSubview(iv2)
+            
+            _viewControllers = [vc1, vc2]
+        }
         
         setViewControllers(
             [
-                vc1
+                _viewControllers[0]
             ],
             direction: .forward,
             animated: true,
             completion: nil)
-        _viewControllers = [vc1, vc2, vc3]
     }
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
         if sender == doneButtonItem {

@@ -163,6 +163,8 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
                     cell.heightLabel.text = numberFormatter.string(from: NSDecimalNumber(decimal: dataValue.heightInMeters))
                     cell.circumferenceLabel.text = numberFormatter.string(from: NSDecimalNumber(decimal: dataValue.circumferenceInMeters))
                     cell.carbonLabel.text = carbonFormatter.string(from: NSDecimalNumber(decimal: dataValue.carbonInKilograms))
+                    cell.layer.borderColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
+                    cell.layer.borderWidth = 4
                 }
             } else {
                 cell.heightLabel.text = "____"
@@ -173,11 +175,23 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
             log.error("Failed to get EcoData for site \(site.name!): \(error)")
         }
         
+        if treeNumber == 7 || treeNumber == 9 {
+            cell.layer.borderColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
+            cell.layer.borderWidth = 4
+            cell.heightLabel.text = "n/a"
+            cell.circumferenceLabel.text = "n/a"
+            cell.carbonLabel.text = "n/a"
+        }
+        
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedSite = sites[indexPath.row]
+        let treeNumber = selectedSite.name!.split(separator: " ")[1]
+        if treeNumber == "7" || treeNumber == "9" {
+            return
+        }
         performSegue(withIdentifier: "detailView", sender: nil)
     }
     

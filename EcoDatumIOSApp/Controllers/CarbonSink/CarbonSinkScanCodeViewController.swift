@@ -105,8 +105,9 @@ CoreDataContextHolder, SiteEntitiesHolder {
                 return
         }
         
+        let treeNumber = stringValue.split(separator: "#")[1]
         selectedSite = sites.filter {
-            $0.name == stringValue
+            $0.name == "Tree \(treeNumber)"
         }.first
         
         if selectedSite == nil {

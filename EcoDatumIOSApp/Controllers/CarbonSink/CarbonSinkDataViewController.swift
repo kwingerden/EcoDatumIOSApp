@@ -125,14 +125,15 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
     
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
         if sender == doneButtonItem {
-            if let carbonTextValue = carbonTextField.text,
-                !carbonTextValue.isEmpty {
+            if carbonTextField.layer.borderColor == UIColor.green.cgColor {
                 newOrUpdateEcoDatum()
                 heightTextField.resignFirstResponder()
                 circumferenceTextField.resignFirstResponder()
                 dismiss(animated: true, completion: nil)
-            } else {
+            } else if carbonTextField.layer.borderColor == UIColor.red.cgColor  {
                 displayAlert()
+            } else {
+                dismiss(animated: true, completion: nil)
             }
         }
     }
@@ -160,6 +161,11 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
         }
         
         let newTextValue = (currentTextFieldValue as NSString).replacingCharacters(in: range, with: string)
+        
+        if newTextValue == "." {
+            return true
+        }
+        
         if let newDecimalValue = decimalValue(newTextValue: newTextValue) {
             calculateCarbon(textField: textField, newDecimalValue: newDecimalValue)
             return true

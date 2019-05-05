@@ -12,7 +12,8 @@ import EcoDatumService
 import Foundation
 import UIKit
 
-class CarbonSinkMapViewController: UIViewController, CoreDataContextHolder, SiteEntityHolder  {
+class CarbonSinkMapViewController: UIViewController,
+CoreDataContextHolder, SiteEntityHolder, UIScrollViewDelegate  {
     
     var context: NSManagedObjectContext!
     
@@ -20,7 +21,7 @@ class CarbonSinkMapViewController: UIViewController, CoreDataContextHolder, Site
     
     @IBOutlet weak var doneButtonItem: UIBarButtonItem!
     
-    @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -28,8 +29,16 @@ class CarbonSinkMapViewController: UIViewController, CoreDataContextHolder, Site
         super.viewDidLoad()
         
         navigationItem.title = "\(site.name!) - Map"
-        let imageName = site.name!.split(separator: " ")[1]
-        imageView.image = UIImage(named: "CarbonSinkMaps/\(imageName)")
+        let imageNumber = site.name!.split(separator: " ")[1]
+        imageView.image = UIImage(named: "CarbonSinkMaps/\(imageNumber)")
+        imageView.sizeToFit()
+        
+        scrollView.delegate = self
+        scrollView.minimumZoomScale = 0.5
+        scrollView.maximumZoomScale = 5.0
+        scrollView.zoomScale = 0.5
+        scrollView.contentSize = imageView.frame.size
+        scrollView.contentOffset = CGPoint(x: 250, y: 0)
     }
     
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
@@ -37,20 +46,8 @@ class CarbonSinkMapViewController: UIViewController, CoreDataContextHolder, Site
             dismiss(animated: true, completion: nil)
         }
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        var heightMultiplier: CGFloat = 0.0
-        if  UIDevice.current.orientation == UIDeviceOrientation.portrait ||
-            UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown {
-            heightMultiplier = 0.85
-        } else {
-            heightMultiplier = 0.75
-        }
-        imageWidthConstraint.constant = min(view.frame.width - 20, view.frame.height * heightMultiplier)
-        imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = 15
-        imageView.layer.borderWidth = 1
-        imageView.layer.borderColor = EDRichBlack.cgColor
+
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
     }
 }

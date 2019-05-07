@@ -52,5 +52,60 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string></string>
+			</array>
+			<key>CFBundleTypeIconFiles</key>
+			<array>
+				<string>uti_20.png</string>
+				<string>uti_44.png</string>
+				<string>uti_64.png</string>
+				<string>uti_320.png</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>EcoDatum Notebook</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.ecodatum.Notebook.ednb</string>
+			</array>
+		</dict>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>EcoDatum Notebook</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.ecodatum.Notebook.ednb</string>
+			<key>UTTypeIconFiles</key>
+			<array>
+				<string>uti_320.png</string>
+				<string>uti_64.png</string>
+				<string>uti_44.png</string>
+				<string>uti_20.png</string>
+			</array>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<string>ednb</string>
+				<key>public.mime-type</key>
+				<string>application/EDNotebook</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

@@ -8,6 +8,7 @@
 
 import CoreData
 import CoreLocation
+import EcoDatumCommon
 import EcoDatumCoreData
 import EcoDatumModel
 import EcoDatumService
@@ -110,7 +111,7 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
         if sender == uploadButton {
-            
+            exportNotebook()
         } else if sender == scanCodeButton {
             performSegue(withIdentifier: "scanCode", sender: nil)
         } else if sender == deleteButton {
@@ -232,6 +233,37 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
         alertController.addAction(cancelAction)
         alertController.popoverPresentationController?.barButtonItem = deleteButton
         present(alertController, animated: true, completion: nil)
+    }
+    
+    private func exportNotebook() {
+        guard let nm = try? notebook.model(),
+            let json = try? toJSON(nm) else {
+                log.error("Failed to export notebook")
+                return
+        }
+        
+        guard let documentsDir = FileManager.default.urls(
+            for: .documentDirectory,
+            in: .userDomainMask
+            ).first else {
+                log.error("Failed to obtain documents directory")
+                return
+        }
+        let path = documentsDir.appendingPathComponent("/\(notebook.name!).ednb")
+        do {
+            try json.data(using: .utf8)?.write(to: path)
+        } catch let error as NSError {
+            log.error("Failed to export Notebook to path: \(error) \(path.absoluteString)")
+        }
+        
+        let activity = UIActivityViewController(
+            activityItems:[
+                "Exporting Notebook \(NOTEBOOK_NAME)", path
+            ],
+            applicationActivities: nil
+        )
+        activity.popoverPresentationController?.barButtonItem = uploadButton
+        present(activity, animated: true, completion: nil)
     }
     
 }

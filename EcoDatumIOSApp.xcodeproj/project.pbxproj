@@ -16,6 +16,10 @@
 		BE023354227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023353227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift */; };
 		BE023356227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023355227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift */; };
 		BE023358227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE023357227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift */; };
+		BE15987522811B5500C9978C /* uti_44.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15987122811B5500C9978C /* uti_44.png */; };
+		BE15987622811B5500C9978C /* uti_320.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15987222811B5500C9978C /* uti_320.png */; };
+		BE15987722811B5500C9978C /* uti_20.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15987322811B5500C9978C /* uti_20.png */; };
+		BE15987822811B5500C9978C /* uti_64.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15987422811B5500C9978C /* uti_64.png */; };
 		BE2D2FD62236F8C800CBE228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */; };
 		BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FD92236F8C800CBE228 /* Notebook.storyboard */; };
 		BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2D2FDC2236F8C900CBE228 /* Assets.xcassets */; };
@@ -203,6 +207,10 @@
 		BE023353227B7EBF006F3E7E /* CarbonSinkDataNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDataNavigationController.swift; sourceTree = "<group>"; };
 		BE023355227B7ED6006F3E7E /* CarbonSinkMapNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkMapNavigationController.swift; sourceTree = "<group>"; };
 		BE023357227B7EE2006F3E7E /* CarbonSinkPhotosNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkPhotosNavigationController.swift; sourceTree = "<group>"; };
+		BE15987122811B5500C9978C /* uti_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uti_44.png; sourceTree = SOURCE_ROOT; };
+		BE15987222811B5500C9978C /* uti_320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uti_320.png; sourceTree = SOURCE_ROOT; };
+		BE15987322811B5500C9978C /* uti_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uti_20.png; sourceTree = SOURCE_ROOT; };
+		BE15987422811B5500C9978C /* uti_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uti_64.png; sourceTree = SOURCE_ROOT; };
 		BE2D2FD22236F8C800CBE228 /* EcoDatumIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoDatumIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D2FD52236F8C800CBE228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2D2FDA2236F8C800CBE228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notebook.storyboard; sourceTree = "<group>"; };
@@ -294,6 +302,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE15986C22811A1700C9978C /* UTI Icons */ = {
+			isa = PBXGroup;
+			children = (
+				BE15987322811B5500C9978C /* uti_20.png */,
+				BE15987122811B5500C9978C /* uti_44.png */,
+				BE15987422811B5500C9978C /* uti_64.png */,
+				BE15987222811B5500C9978C /* uti_320.png */,
+			);
+			name = "UTI Icons";
+			sourceTree = "<group>";
+		};
 		BE2D2FC92236F8C800CBE228 = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +338,7 @@
 		BE2D2FD42236F8C800CBE228 /* EcoDatumIOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE15986C22811A1700C9978C /* UTI Icons */,
 				BE2D305922385CA200CBE228 /* Resources */,
 				BE2D305622385A2900CBE228 /* Views */,
 				BE2D3045223703CB00CBE228 /* Controllers */,
@@ -807,11 +827,15 @@
 				BEB89305224EA30D0094A21E /* Site.storyboard in Resources */,
 				BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */,
 				BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */,
+				BE15987822811B5500C9978C /* uti_64.png in Resources */,
 				BE3C6DED227E8C6600626E9E /* CarbonSinkMaps.xcassets in Resources */,
+				BE15987522811B5500C9978C /* uti_44.png in Resources */,
 				BEB18A1D2273F4D80019146C /* CarbonSinkDataView.xib in Resources */,
 				BEB18A0E227292170019146C /* CarbonSink.storyboard in Resources */,
+				BE15987622811B5500C9978C /* uti_320.png in Resources */,
 				BEB8930C224EA9780094A21E /* SiteMasterTableViewCell.xib in Resources */,
 				BEB18A26227658BC0019146C /* Main.storyboard in Resources */,
+				BE15987722811B5500C9978C /* uti_20.png in Resources */,
 				BEB18A192273F3740019146C /* CarbonSinkImageView.xib in Resources */,
 				BE2D2FDB2236F8C800CBE228 /* Notebook.storyboard in Resources */,
 				BECE1FA922513757009CE092 /* TestNotebookFooterView.xib in Resources */,

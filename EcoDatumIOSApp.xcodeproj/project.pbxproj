@@ -48,6 +48,8 @@
 		BE4BF705224098EE00AAE0DA /* EcoDatumService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BF701224098AE00AAE0DA /* EcoDatumService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE5CF4EC223B3736003A6332 /* BorderedRoundedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */; };
 		BE5CF4EE223B3B64003A6332 /* BorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */; };
+		BE5E954922823DD000F23174 /* CarbonSinkKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5E954822823DD000F23174 /* CarbonSinkKeyboardView.xib */; };
+		BE5E954B228296A800F23174 /* CarbonSinkKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E954A228296A800F23174 /* CarbonSinkKeyboardView.swift */; };
 		BE82021F2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82021E2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift */; };
 		BE8202212277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8202202277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift */; };
 		BEB18A0E227292170019146C /* CarbonSink.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB18A0D227292170019146C /* CarbonSink.storyboard */; };
@@ -241,6 +243,8 @@
 		BE4BF6F7224098AE00AAE0DA /* EcoDatumService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EcoDatumService.xcodeproj; path = ../EcoDatumService/EcoDatumService.xcodeproj; sourceTree = "<group>"; };
 		BE5CF4EB223B3736003A6332 /* BorderedRoundedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderedRoundedButton.xib; sourceTree = "<group>"; };
 		BE5CF4ED223B3B64003A6332 /* BorderedRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedRoundedButton.swift; sourceTree = "<group>"; };
+		BE5E954822823DD000F23174 /* CarbonSinkKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarbonSinkKeyboardView.xib; sourceTree = "<group>"; };
+		BE5E954A228296A800F23174 /* CarbonSinkKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkKeyboardView.swift; sourceTree = "<group>"; };
 		BE82021E2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkScanCodeViewController.swift; sourceTree = "<group>"; };
 		BE8202202277FB6100FB5FDC /* CarbonSinkDetailTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSinkDetailTabBarController.swift; sourceTree = "<group>"; };
 		BEB18A0D227292170019146C /* CarbonSink.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarbonSink.storyboard; sourceTree = "<group>"; };
@@ -575,6 +579,8 @@
 				BEB18A1A2273F4B00019146C /* CarbonSinkImageView.swift */,
 				BEB18A1C2273F4D80019146C /* CarbonSinkDataView.xib */,
 				BEB18A1E2273F4F70019146C /* CarbonSinkDataView.swift */,
+				BE5E954822823DD000F23174 /* CarbonSinkKeyboardView.xib */,
+				BE5E954A228296A800F23174 /* CarbonSinkKeyboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -824,6 +830,7 @@
 				BE2D2FE02236F8C900CBE228 /* LaunchScreen.storyboard in Resources */,
 				BECE1FA222512996009CE092 /* TestNotebook.storyboard in Resources */,
 				BECE1FAD22513A01009CE092 /* TestNotebookHeaderView.xib in Resources */,
+				BE5E954922823DD000F23174 /* CarbonSinkKeyboardView.xib in Resources */,
 				BEB89305224EA30D0094A21E /* Site.storyboard in Resources */,
 				BE2D305B22385CC000CBE228 /* ColorPalette.pdf in Resources */,
 				BE2D2FDD2236F8C900CBE228 /* Assets.xcassets in Resources */,
@@ -897,6 +904,7 @@
 				BECE1FAB2251376E009CE092 /* TestNotebookFooterView.swift in Sources */,
 				BE471A2B224B277100E041B8 /* NotebookRootViewController.swift in Sources */,
 				BEB89302224D5A230094A21E /* Notifications.swift in Sources */,
+				BE5E954B228296A800F23174 /* CarbonSinkKeyboardView.swift in Sources */,
 				BEB89310224F0CBE0094A21E /* SitePhotoViewController.swift in Sources */,
 				BECE1FAF22513A1E009CE092 /* TestNotebookHeaderView.swift in Sources */,
 				BE82021F2277F85A00FB5FDC /* CarbonSinkScanCodeViewController.swift in Sources */,

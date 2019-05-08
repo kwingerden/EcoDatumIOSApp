@@ -72,6 +72,21 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
             return
         }
         
+        
+        let locations = [
+            CLLocation(latitude: 34.883979, longitude: -120.422244), // Tree 1
+            CLLocation(latitude: 34.884032, longitude: -120.421759), // Tree 2
+            CLLocation(latitude: 34.884147, longitude: -120.421879), // Tree 3
+            CLLocation(latitude: 34.884177, longitude: -120.421666), // Tree 4
+            CLLocation(latitude: 34.884130, longitude: -120.421577), // Tree 5
+            CLLocation(latitude: 34.884085, longitude: -120.421600), // Tree 6
+            CLLocation(latitude: 34.884036, longitude: -120.421627), // Tree 7
+            CLLocation(latitude: 34.883844, longitude: -120.421487), // Tree 8
+            CLLocation(latitude: 34.883953, longitude: -120.421279), // Tree 9
+            CLLocation(latitude: 34.883964, longitude: -120.421024), // Tree 10
+            CLLocation(latitude: 34.884004, longitude: -120.420957), // Tree 11
+            CLLocation(latitude: 34.884088, longitude: -120.420873)  // Tree 12
+        ]
         for index in 1...12 {
             do {
                 var site = try notebook?.findSite(by: "Tree \(index)")
@@ -79,6 +94,7 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
                     site = try SiteEntity.new(
                         context,
                         name: "Tree \(index)",
+                        at: locations[index - 1],
                         in: notebook)
                     try site!.save()
                 }

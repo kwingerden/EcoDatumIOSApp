@@ -105,6 +105,12 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
             selector: #selector(keyboardChange(notification:)),
             name: UIResponder.keyboardWillChangeFrameNotification,
             object: nil)
+        
+        let keyboardNib = UINib.init(nibName: "CarbonSinkKeyboardView", bundle: nil)
+        let keyboardView = keyboardNib.instantiate(withOwner: nil, options: nil)[0] as! CarbonSinkKeyboardView
+        keyboardView.frame.size = CGSize(width: 0, height: 150)
+        keyboardView.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth]
+        heightTextField.inputView = keyboardView
     }
     
     deinit {

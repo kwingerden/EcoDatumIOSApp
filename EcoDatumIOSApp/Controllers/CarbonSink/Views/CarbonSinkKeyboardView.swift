@@ -9,8 +9,29 @@
 import Foundation
 import UIKit
 
-class CarbonSinkKeyboardView: UIView {
+enum CarbonSinkKeyboardKey: String {
+    case one = "1"
+    case two = "2"
+    case three = "3"
+    case four = "4"
+    case five = "5"
+    case six = "6"
+    case seven = "7"
+    case eight = "8"
+    case nine = "9"
+    case zero = "0"
+    case decimal = "."
+    case delete = "Del"
+}
 
+protocol CarbonSinkKeyboardDelegate {
+    func keyPressed(_ key: CarbonSinkKeyboardKey)
+}
+
+class CarbonSinkKeyboardView: UIView {
+    
+    var delegate: CarbonSinkKeyboardDelegate?
+    
     @IBOutlet weak var oneButton: UIButton!
     
     @IBOutlet weak var twoButton: UIButton!
@@ -29,39 +50,39 @@ class CarbonSinkKeyboardView: UIView {
     
     @IBOutlet weak var nineButton: UIButton!
     
+    @IBOutlet weak var zeroButton: UIButton!
+    
     @IBOutlet weak var decimalButton: UIButton!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
-        /*
-        switch sender {
-        case oneButton:
-        case twoButton:
-            case threeButton:
-            case fourButton:
-            case fiveButton:
-            case sixButton:
-            case sevenButton:
-            case eightButton:
-            case nineButton:
-            case decimalButton:
-        default:
-            log.error("Unexpected button \(sender)")
+        if let title = sender.titleLabel?.text,
+            let key = CarbonSinkKeyboardKey(rawValue: title),
+            let delegate = delegate {
+            delegate.keyPressed(key)
         }
- */
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        styleButton(oneButton)
-        styleButton(twoButton)
-        styleButton(threeButton)
-        styleButton(fourButton)
-        styleButton(fiveButton)
-        styleButton(sixButton)
-        styleButton(sevenButton)
-        styleButton(eightButton)
-        styleButton(nineButton)
-        styleButton(decimalButton)
+        
+        [
+            oneButton,
+            twoButton,
+            threeButton,
+            fourButton,
+            fiveButton,
+            sixButton,
+            sevenButton,
+            eightButton,
+            nineButton,
+            zeroButton,
+            deleteButton,
+            decimalButton
+            ].forEach {
+                styleButton($0)
+        }
     }
     
     private func styleButton(_ button: UIButton) {

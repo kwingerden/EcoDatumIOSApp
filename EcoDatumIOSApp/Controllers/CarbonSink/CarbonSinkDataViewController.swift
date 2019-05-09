@@ -14,7 +14,7 @@ import Foundation
 import UIKit
 
 class CarbonSinkDataViewController: UIViewController,
-CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
+CarbonSinkKeyboardDelegate, CoreDataContextHolder, SiteEntityHolder  {
     
     var context: NSManagedObjectContext!
     
@@ -86,9 +86,6 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
         dataView.layer.borderWidth = 1
         dataView.layer.borderColor = EDRichBlack.cgColor
         
-        heightTextField.delegate = self
-        circumferenceTextField.delegate = self
-        
         let nc = NotificationCenter.default
         nc.addObserver(
             self,
@@ -110,7 +107,10 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
         let keyboardView = keyboardNib.instantiate(withOwner: nil, options: nil)[0] as! CarbonSinkKeyboardView
         keyboardView.frame.size = CGSize(width: 0, height: 150)
         keyboardView.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth]
+        keyboardView.delegate = self
+        
         heightTextField.inputView = keyboardView
+        circumferenceTextField.inputView = keyboardView
     }
     
     deinit {
@@ -144,49 +144,32 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == heightTextField {
-            circumferenceTextField.becomeFirstResponder()
-        } else if textField == circumferenceTextField {
-            if let carbonTextValue = carbonTextField.text,
-                !carbonTextValue.isEmpty {
-                newOrUpdateEcoDatum()
-                circumferenceTextField.resignFirstResponder()
-                dismiss(animated: true, completion: nil)
-            } else {
-                displayAlert()
-            }
+    func keyPressed(_ key: CarbonSinkKeyboardKey) {
+        var textField: UITextField?
+        if heightTextField.isEditing {
+            textField = heightTextField
+        } else if circumferenceTextField.isEditing {
+            textField = circumferenceTextField
+        } else {
+            return
         }
-        return true
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let currentTextFieldValue = textField.text else {
-            log.error("Unexpected. Text field should have text.")
-            return false
+
+        let currentTextField = textField!
+        let currentTextValue = currentTextField.text!
+        
+        if key == .decimal && currentTextValue.contains(".") {
+            return
         }
         
-        let newTextValue = (currentTextFieldValue as NSString).replacingCharacters(in: range, with: string)
-        
-        if newTextValue == "." {
-            return true
+        if key == .delete {
+            currentTextField.deleteBackward()
+        } else {
+            currentTextField.insertText(key.rawValue)
         }
-        
-        if let newDecimalValue = decimalValue(newTextValue: newTextValue) {
-            calculateCarbon(textField: textField, newDecimalValue: newDecimalValue)
-            return true
-        } else if newTextValue.isEmpty {
-            calculateCarbon(textField: textField, newDecimalValue: nil)
-            return true
-        }
-        return false
+
+        calculateCarbon()
     }
-    
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        calculateCarbon(textField: textField, newDecimalValue: nil)
-        return true
-    }
-    
+
     @objc private func keyboardChange(notification: Notification) {
         let keyboardNSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
         guard let keyboardRectValue = keyboardNSValue?.cgRectValue else {
@@ -205,35 +188,17 @@ CoreDataContextHolder, SiteEntityHolder, UITextFieldDelegate  {
         }
     }
     
-    private func decimalValue(newTextValue: String) -> Decimal? {
-        return numberFormatter.number(from: newTextValue)?.decimalValue
-    }
-    
-    private func calculateCarbon(textField: UITextField, newDecimalValue: Decimal?) {
-        var heightInMetersOptional: Decimal?
-        var circumferenceInMetersOptional: Decimal?
-        
-        if textField == heightTextField {
-            heightInMetersOptional = newDecimalValue
-            if let circumferenceTextValue = circumferenceTextField.text {
-                circumferenceInMetersOptional = numberFormatter.number(from: circumferenceTextValue)?.decimalValue
-            }
-        } else if textField == circumferenceTextField {
-            if let heightTextValue = heightTextField.text {
-                heightInMetersOptional = numberFormatter.number(from: heightTextValue)?.decimalValue
-            }
-            circumferenceInMetersOptional = newDecimalValue
+    private func calculateCarbon() {
+        let heightInMeters = numberFormatter.number(from: heightTextField.text!)?.decimalValue
+        let circumferenceInMeters = numberFormatter.number(from: circumferenceTextField.text!)?.decimalValue
+        if heightInMeters == nil || circumferenceInMeters == nil || heightInMeters == 0.0 || circumferenceInMeters == 0.0 {
+            carbonTextField.text = ""
+            carbonTextField.layer.borderWidth = 2
+            carbonTextField.layer.borderColor = UIColor.red.cgColor
+            return
         }
-        
-        guard let heightInMeters = heightInMetersOptional,
-            let circumferenceInMeters = circumferenceInMetersOptional else {
-                carbonTextField.text = ""
-                carbonTextField.layer.borderWidth = 2
-                carbonTextField.layer.borderColor = UIColor.red.cgColor
-                return
-        }
-        
-        let volOfTreeMetersCubed = Decimal(0.0567) + (Decimal(0.5074) * pow(circumferenceInMeters / Decimal.pi, 2) * heightInMeters)
+
+        let volOfTreeMetersCubed = Decimal(0.0567) + (Decimal(0.5074) * pow(circumferenceInMeters! / Decimal.pi, 2) * heightInMeters!)
         let volOfTreeCentimetersCubed = volOfTreeMetersCubed * Decimal(1000000)
         let densityOfWoodGramsPerCentimetersCubed = Decimal(0.6)
         let massOfWoodGrams = Decimal(0.55) * volOfTreeCentimetersCubed * densityOfWoodGramsPerCentimetersCubed

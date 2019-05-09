@@ -14,17 +14,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CarbonSinkKeyboardView" customModule="EcoDatumIOSApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="615" height="218"/>
+            <rect key="frame" x="0.0" y="0.0" width="671" height="248"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6sa-4D-Zib">
-                    <rect key="frame" x="8" y="8" width="599" height="202"/>
+                    <rect key="frame" x="8" y="8" width="655" height="232"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="her-N4-WDG">
-                            <rect key="frame" x="0.0" y="0.0" width="599" height="97"/>
+                            <rect key="frame" x="0.0" y="0.0" width="655" height="112"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SU-sk-i8P">
-                                    <rect key="frame" x="0.0" y="0.0" width="113.5" height="97"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="1">
@@ -35,81 +35,130 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFs-He-Yg9">
-                                    <rect key="frame" x="121.5" y="0.0" width="113.5" height="97"/>
+                                    <rect key="frame" x="110.5" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="2">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="bVY-UY-tWv"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5N-S0-jgO">
-                                    <rect key="frame" x="243" y="0.0" width="113" height="97"/>
+                                    <rect key="frame" x="221" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="3">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="NqB-DV-r7e"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InH-0x-dRW">
-                                    <rect key="frame" x="364" y="0.0" width="113.5" height="97"/>
+                                    <rect key="frame" x="331.5" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="4">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="nFg-fT-vfA"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-0Z-hbu">
-                                    <rect key="frame" x="485.5" y="0.0" width="113.5" height="97"/>
+                                    <rect key="frame" x="442" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="5">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="72u-SG-Y4v"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIk-Tm-chM">
+                                    <rect key="frame" x="552.5" y="0.0" width="102.5" height="112"/>
+                                    <color key="backgroundColor" name="EDAsparagus"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                    <state key="normal" title="Del">
+                                        <color key="titleColor" name="EDPlatinum"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="a3G-nM-eir"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nli-Iw-uIK">
-                            <rect key="frame" x="0.0" y="105" width="599" height="97"/>
+                            <rect key="frame" x="0.0" y="120" width="655" height="112"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az5-HO-zn8">
-                                    <rect key="frame" x="0.0" y="0.0" width="113.5" height="97"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="6">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Y80-KS-ik8"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8A-Zn-1PL">
-                                    <rect key="frame" x="121.5" y="0.0" width="113.5" height="97"/>
+                                    <rect key="frame" x="110.5" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="7">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="XeZ-Ae-Bj3"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkq-tA-CvO">
-                                    <rect key="frame" x="243" y="0.0" width="113" height="97"/>
+                                    <rect key="frame" x="221" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="8">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="v7i-EM-rtj"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKb-ZY-MOE">
-                                    <rect key="frame" x="364" y="0.0" width="113.5" height="97"/>
+                                    <rect key="frame" x="331.5" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="9">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="OcL-4c-szz"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3B-zS-imp">
-                                    <rect key="frame" x="485.5" y="0.0" width="113.5" height="97"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2j-tL-HcS">
+                                    <rect key="frame" x="442" y="0.0" width="102.5" height="112"/>
+                                    <color key="backgroundColor" name="EDAsparagus"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                    <state key="normal" title="0">
+                                        <color key="titleColor" name="EDPlatinum"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="3tV-we-sah"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIX-CN-VmS">
+                                    <rect key="frame" x="552.5" y="0.0" width="102.5" height="112"/>
                                     <color key="backgroundColor" name="EDAsparagus"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title=".">
                                         <color key="titleColor" name="EDPlatinum"/>
                                     </state>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="xzU-XC-fdg"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -132,7 +181,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="decimalButton" destination="r3B-zS-imp" id="KCc-5S-a2u"/>
+                <outlet property="decimalButton" destination="EIX-CN-VmS" id="of3-U6-ZE0"/>
+                <outlet property="deleteButton" destination="nIk-Tm-chM" id="JII-pB-fcs"/>
                 <outlet property="eightButton" destination="Tkq-tA-CvO" id="H0z-h9-SNX"/>
                 <outlet property="fiveButton" destination="ggO-0Z-hbu" id="nJs-Bp-z9j"/>
                 <outlet property="fourButton" destination="InH-0x-dRW" id="haR-eH-zMg"/>
@@ -142,8 +192,9 @@
                 <outlet property="sixButton" destination="az5-HO-zn8" id="UN8-Jb-TkY"/>
                 <outlet property="threeButton" destination="l5N-S0-jgO" id="4jX-QN-Pgj"/>
                 <outlet property="twoButton" destination="NFs-He-Yg9" id="sP0-FW-ge8"/>
+                <outlet property="zeroButton" destination="b2j-tL-HcS" id="oR9-qv-jAF"/>
             </connections>
-            <point key="canvasLocation" x="330.39999999999998" y="-48.575712143928037"/>
+            <point key="canvasLocation" x="285.60000000000002" y="-35.082458770614693"/>
         </view>
     </objects>
     <resources>

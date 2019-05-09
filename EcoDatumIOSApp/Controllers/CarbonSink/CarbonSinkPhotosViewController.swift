@@ -42,7 +42,11 @@ UIPageViewControllerDataSource {
         let treeNumber = site.name!.split(separator: " ")[1]
         
         let iv1 = imageViewNib.instantiate(withOwner: nil, options: nil)[0] as! CarbonSinkImageView
-        iv1.dateLabel.text = "2018-05-30"
+        if treeNumber == "11" || treeNumber == "12" {
+            iv1.dateLabel.text = "2019-05-04"
+        } else {
+            iv1.dateLabel.text = "2018-05-30"
+        }
         iv1.imageView.image = UIImage(named: "CarbonSinkTrees/\(treeNumber)/1")
         let vc1 = UIViewController()
         vc1.view.addSubview(iv1)

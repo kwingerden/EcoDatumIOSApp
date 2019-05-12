@@ -127,7 +127,7 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
     
     @IBAction func buttonPressed(_ sender: UIBarButtonItem) {
         if sender == uploadButton {
-            exportNotebook()
+            doExportNotebook(with: UIDevice.current.name)
         } else if sender == scanCodeButton {
             performSegue(withIdentifier: "scanCode", sender: nil)
         } else if sender == deleteButton {
@@ -251,21 +251,39 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
         present(alertController, animated: true, completion: nil)
     }
     
-    private func exportNotebook() {
+    private func startExportNotebook() {
+        let alertController = UIAlertController(
+            title: "Save File",
+            message: "Enter the name of the file or leave blank. If left blank, then the default file name is 'CarbonSink'.",
+            preferredStyle: .alert)
+        alertController.addTextField {
+            $0.placeholder = "Carbon Sink"
+        }
+        let continueAction = UIAlertAction(title: "Continue", style: .default) { _ in
+            guard let textField = alertController.textFields?[0],
+                  let text = textField.text else {
+                return
+            }
+            if text.isEmpty {
+                self.doExportNotebook(with: "Carbon Sink")
+            } else {
+                self.doExportNotebook(with: text)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(continueAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func doExportNotebook(with name: String) {
         guard let nm = try? notebook.model(),
             let json = try? toJSON(nm) else {
                 log.error("Failed to export notebook")
                 return
         }
         
-        guard let documentsDir = FileManager.default.urls(
-            for: .documentDirectory,
-            in: .userDomainMask
-            ).first else {
-                log.error("Failed to obtain documents directory")
-                return
-        }
-        let path = documentsDir.appendingPathComponent("/\(notebook.name!).ednb")
+        let path = FileManager.default.temporaryDirectory.appendingPathComponent("\(name).ednb")
         do {
             try json.data(using: .utf8)?.write(to: path)
         } catch let error as NSError {
@@ -273,9 +291,7 @@ UICollectionViewDelegateFlowLayout, CoreDataContextHolder {
         }
         
         let activity = UIActivityViewController(
-            activityItems:[
-                "Exporting Notebook \(NOTEBOOK_NAME)", path
-            ],
+            activityItems: [path],
             applicationActivities: nil
         )
         activity.popoverPresentationController?.barButtonItem = uploadButton
